@@ -42,7 +42,7 @@ header {
 
 #vl { /*수직선*/
     border-left: 2px solid #000;
-    height: 500px;
+    height:84%;
     position: absolute;
     left: 100px;
 }
@@ -63,9 +63,9 @@ section {
     width: 604px;
 }
 
-footer {
+/* footer {
     height: 50px;
     background-color: rgb(138, 130, 130);
     position: relative;
     clear: both;
-}
+} */
