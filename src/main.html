@@ -1,12 +1,128 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/style/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/style/signup.css">
+    <script src="https://kit.fontawesome.com/a81368914c.js"></script>
     <title>Dear Diary</title>
 </head>
+
 <body>
-    
+    <div class="wapper">
+        <!-- <img class="wave" src="/img/HCI_logo.png"> -->
+        <div class="container">
+            <div class="img">
+                <img src="/img/HCI_logo.png">
+            </div>
+            <!-- <div class="text">
+                    <p>see how to work</p>
+                </div> -->
+            <div class="signup-container">
+                <form action="main.html">
+                    <img class="female" src="/img/female.png">
+                    <h2>Sign Up</h2>
+                    <!-- textbox -->
+                    <div class="input-div one">
+                        <div class="i">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div>
+                            <h5>ID(Email)</h5>
+                            <input class="input" type="text">
+                        </div>
+                    </div>
+                    <div class="input-div two">
+                        <div class="i">
+                            <i class="fas fa-user"></i>
+
+                        </div>
+                        <div>
+                            <h5>Username</h5>
+                            <input class="input" type="text">
+                        </div>
+                    </div>
+                    <div class="input-div">
+                        <div class="i">
+                            <i class="fas fa-lock"></i>
+                        </div>
+                        <div>
+                            <h5>Password</h5>
+                            <input class="input" type="password">
+                        </div>
+                    </div>
+                    <div class="input-div">
+                        <div class="i">
+                            <i class="fas fa-lock"></i>
+                        </div>
+                        <div>
+                            <h5>Confirm Password</h5>
+                            <input class="input" type="password">
+                        </div>
+                    </div>
+                    <div class="button">
+                        <!-- <a href="#">Forgot Password?</a> -->
+                        <input type="submit" class="btn" value="Signup">
+                        <input class="btn1" onclick="document.getElementById('id01').style.display='block'" value="Login">
+                        <!-- <button class="btn" onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button> -->
+                    </div>
+                </form>
+            </div>
+
+        </div>
+    </div>
+
+    <div id="id01" class="modal">
+        <form class="modal-content animate">
+            <!-- action="/action_page.php" method="post" -->
+            <div class="imgcontainer">
+                <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+                <img class="female" src="/img/female.png">
+            </div>
+
+            <div class="modalcontainer">
+                <div class="input-modal-div a">
+                    <div class="i">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <div>
+                        <h5>E-mail</h5>
+                        <input class="input" type="password">
+                    </div>
+                </div>
+                <div class="input-modal-div b">
+                    <div class="i">
+                        <i class="fas fa-lock"></i>
+                    </div>
+                    <div>
+                        <h5>Password</h5>
+                        <input class="input" type="password">
+                    </div>
+                </div>
+                <button class="modalbtn" type="submit">Login</button>
+            </div>
+        </form>
+    </div>
+    <script type="text/javascript" src="/js/signup.js"></script>
+    <!-- <script src="https://code.jquery.com/jquery-latest.js"></script> -->
+
+
+    <script>
+        // Get the modal
+        var modal = document.getElementById('id01');
+
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function (event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+
 </body>
+
 </html>
