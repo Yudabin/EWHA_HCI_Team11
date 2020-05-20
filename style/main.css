@@ -21,26 +21,12 @@ body {
     background-size: 200%;
     transition: .5s;
 }
-.btn1{
-    width: 40%;
-    height: 50px;
-    border-radius: 25px;
-    margin: 1rem 0;
-    font-size: 1.2rem;
-    text-align: center;
-    outline: none;
-    border: none;
-    background-image: linear-gradient(to right, #8c2a7c, #b1359c,  #ca4eb6);
-    cursor: pointer;
-    color: #fff;
-    text-transform: uppercase;
-    font-family: 'Poppins', sans-serif;
-    background-size: 200%;
-    transition: .5s;
-}
 
 button:hover {
     opacity: 0.8;
+}
+.btn:hover{
+    background-position: right; 
 }
 
 /* Extra styles for the cancel button */
