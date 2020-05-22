@@ -28,14 +28,29 @@ body{
     padding: 0 2rem;
 }
 .img{
-    display: flex;
+    /* display: flex;
     justify-content: flex-end;
-    align-items: center;
+    align-items: center; */
+    background: url("/img/HCI_logo.png") repeat scroll center center/cover;
+    height: 50vh;
+    width: 100%;
+    margin: 150px 5px 30px 5px;
+    display: flex;
+}
+.img h4{
+    position:sticky;
+    display: flex;
+    margin: 370px 0 30px 120px;
+    font-size: 20px;
+}
+.img a{
+    color: #8c2a7c;
 }
 
 .img img{
     width:400px;
 }
+
 .signup-container{
     display: flex;
     align-items: center;

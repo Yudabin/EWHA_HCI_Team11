@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <title>Dear Diary</title>
+    <meta content="" name="descriptison">
+    <meta content="" name="keywords">
+
+    <!-- Favicons -->
+    <link href="/img/favicon.png" rel="icon">
+    <link href="/img/apple-touch-icon.png" rel="apple-touch-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,300i,400,400i,500,500i,600,600i,700,700i|Playfair+Display:400,400i,500,500i,600,600i,700,700i,900,900i"
+        rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+    <link href="/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/vendor/hover/hover.min.css" rel="stylesheet">
+    <link href="/vendor/ionicons/css/ionicons.min.css" rel="stylesheet">
+    <link href="/vendor/venobox/venobox.css" rel="stylesheet">
+    <link href="/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Template Main CSS File -->
+    <link href="/style/home.css" rel="stylesheet">
+    <link href="/style/signup.css" rel="stylesheet">
+    <link href="/style/main.css" rel="stylesheet">
+
+    <!-- =======================================================
+  * Template Name: Folio - v2.0.1
+  * Template URL: https://bootstrapmade.com/folio-bootstrap-portfolio-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body>
+
+    <!-- ======= Navbar ======= -->
+    <!-- <nav id="main-nav">
+        <div class="row">
+            <div class="container">
+
+                <div class="logo">
+                    <a href="home.html">
+                        <img src="/img/HCI_logo.png" alt="logo">
+                    </a>
+                </div>
+
+                <div class="responsive">
+                    <i data-icon="m" class="ion-navicon-round"></i>
+                </div>
+
+                <ul class="nav-menu list-unstyled">
+                    <li>
+                        <a href="#header" class="smoothScroll">Home</a>
+                    </li>
+                    <li>
+                        <a href="#about" class="smoothScroll">About</a>
+                    </li>
+                    <li>
+                        <a href="#portfolio" class="smoothScroll">Portfolio</a>
+                    </li>
+                    <li>
+                        <a href="#journal" class="smoothScroll">Blog</a>
+                    </li>
+                    <li>
+                        <a href="#contact" class="smoothScroll">Contact</a>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+    </nav> -->
+    <!-- End Navbar -->
+
+    <!-- ======= Hero Section ======= -->
+    <div class="wapper">
+        <!-- <img class="wave" src="/img/HCI_logo.png"> -->
+        <div class="container">
+            <div class="img">
+                <!-- <img src="/img/HCI_logo.png"> -->
+                <h4>
+                    <a href="#target1" class="scroll">
+                        ▶See how it works
+                    </a>
+                </h4>
+            </div>
+            <!-- 회원가입 -->
+            <div class="signup-container">
+                <form action="home.html">
+                    <img class="female" src="/img/female.png">
+                    <h2>Sign Up</h2>
+                    <!-- textbox -->
+                    <div class="input-div one">
+                        <div class="i">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div>
+                            <h5>ID(Email)</h5>
+                            <input class="input" type="text">
+                        </div>
+                    </div>
+                    <div class="input-div two">
+                        <div class="i">
+                            <i class="fas fa-user"></i>
+
+                        </div>
+                        <div>
+                            <h5>Username</h5>
+                            <input class="input" type="text">
+                        </div>
+                    </div>
+                    <div class="input-div">
+                        <div class="i">
+                            <i class="fas fa-lock"></i>
+                        </div>
+                        <div>
+                            <h5>Password</h5>
+                            <input class="input" type="password">
+                        </div>
+                    </div>
+                    <div class="input-div">
+                        <div class="i">
+                            <i class="fas fa-lock"></i>
+                        </div>
+                        <div>
+                            <h5>Confirm Password</h5>
+                            <input class="input" type="password">
+                        </div>
+                    </div>
+                    <div class="button">
+                        <!-- <a href="#">Forgot Password?</a> -->
+                        <!-- <input type="submit" class="btn" value="Signup"> -->
+                        <input type="submit" class="btn" name="signup-button" value="Sign Up" onclick="javascript:btn()" />
+
+                        <input class="btn" onclick="document.getElementById('id01').style.display='block'" value="Login">
+                        <!-- <button class="btn" onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button> -->
+                    </div>
+                </form>
+            </div>
+
+        </div>
+        <!-- 로그인 모달 -->
+        <div id="id01" class="modal">
+            <form class="modal-content animate">
+                <!-- action="/action_page.php" method="post" -->
+                <div class="imgcontainer">
+                    <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+                    <img class="female" src="/img/female.png">
+                </div>
+
+                <div class="modalcontainer">
+                    <div class="input-modal-div a">
+                        <div class="i">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div>
+                            <h5>E-mail</h5>
+                            <input class="input" type="password">
+                        </div>
+                    </div>
+                    <div class="input-modal-div b">
+                        <div class="i">
+                            <i class="fas fa-lock"></i>
+                        </div>
+                        <div>
+                            <h5>Password</h5>
+                            <input class="input" type="password">
+                        </div>
+                    </div>
+                    <button class="modalbtn" type="submit">Login</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+    <!-- 소개화면 -->
+    <div id="target1">
+        <div id="hero" class="home">
+
+            <div class="container">
+                <div class="hero-content">
+                    <h1>Create
+                        <br>
+                        <span class="typed"></span>
+                    </h1>
+                    <p class="typed-items" data-typed-person="My Diary">design your diary</p>
+
+                    <!-- <ul class="list-unstyled list-social">
+                        <li>
+                            <a href="#">
+                                <i class="ion-social-facebook"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="ion-social-twitter"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="ion-social-instagram"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="ion-social-googleplus"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="ion-social-tumblr"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="ion-social-dribbble"></i>
+                            </a>
+                        </li>
+                    </ul> -->
+                </div>
+                <div id="about">
+                    <div class="about-descr">
+                        <p class="p-heading">Personal Web Diary "Dear Diary". </p>
+                        <p class="separator">We came up with Web-based diary system ‘Dear Diary’ which provide ‘write/design’ service with various
+                            tools, ‘organize’ by certain category, ‘export’ as a pdf/png file.</p>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- End Hero -->
+
+    <main id="main">
+
+        <!-- ======= About Section ======= -->
+        <!-- <div id="about" class="paddsection">
+            <div class="container1">
+                <div class="row justify-content-between">
+
+                    <div class="col-lg-4 ">
+                        <div class="div-img-bg">
+                            <div class="about-img">
+                                <img src="/img/HCI_logo.png" class="img-responsive" alt="me">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-7">
+                        <div class="about-descr">
+
+                            <p class="p-heading">im a ux /ui designer austin based who loves clean, simple & unique design. i also enjoy crafting
+                                brand identities, icons, & ilustration work. </p>
+                            <p class="separator">To an English person, it will seem like simplified English, as a skeptical Cambridge friend of
+                                mine told me what Occidental is. The European languages are members of the same family.English
+                                person.
+                            </p>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div> -->
+        <!-- End About Section -->
+
+        <!-- ======= Services Section ======= -->
+        <div id="services">
+            <div class="container1">
+
+                <div class="services-carousel owl-theme">
+
+                    <div class="services-block">
+
+                        <i class="ion-ios-browsers-outline"></i>
+                        <span>UI/UX DESIGN</span>
+                        <p class="separator">To an English person, it will seem like simplified English,told me what </p>
+
+                    </div>
+
+                    <div class="services-block">
+
+                        <i class="ion-ios-lightbulb-outline"></i>
+                        <span>BRAND IDENTITY</span>
+                        <p class="separator">To an English person, it will seem like simplified English,told me what </p>
+
+                    </div>
+
+                    <div class="services-block">
+
+                        <i class="ion-ios-color-wand-outline"></i>
+                        <span>WEB DESIGN</span>
+                        <p class="separator">To an English person, it will seem like simplified English,told me what </p>
+
+                    </div>
+
+                    <div class="services-block">
+
+                        <i class="ion-social-android-outline"></i>
+                        <span>MOBILE APPS</span>
+                        <p class="separator">To an English person, it will seem like simplified English,told me what </p>
+
+                    </div>
+
+                    <div class="services-block">
+
+                        <i class="ion-ios-analytics-outline"></i>
+                        <span>Analytics</span>
+                        <p class="separator">To an English person, it will seem like simplified English,told me what </p>
+
+                    </div>
+
+                    <div class="services-block">
+
+                        <i class="ion-ios-camera-outline"></i>
+                        <span>PHOTOGRAPHY</span>
+                        <p class="separator">To an English person, it will seem like simplified English,told me what </p>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="top">
+            <!-- <button class="top" type="button" onclick="goTop()">맨 위로 ↑</button> -->
+            <i onclick="goTop()" class="fas fa-arrow-circle-up fa-3x"></i>
+        </div>
+
+
+
+
+
+        <!-- End Services Section -->
+
+        <!-- Vendor JS Files -->
+        <script src="/vendor/jquery/jquery.min.js"></script>
+        <script src="/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+        <script src="/vendor/jquery.easing/jquery.easing.min.js"></script>
+        <script src="/vendor/php-email-form/validate.js"></script>
+        <script src="/vendor/typed/typed.js"></script>
+        <script src="/vendor/jquery-sticky/jquery.sticky.js"></script>
+        <script src="/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+        <script src="/vendor/venobox/venobox.min.js"></script>
+        <script src="/vendor/owl.carousel/owl.carousel.min.js"></script>
+
+        <!-- Template Main JS File -->
+        <!-- 밑에 스크립트 적용하면 초록색 나옴 -->
+        <script src="/js/main.js"></script>
+        <script src="/js/signup.js"></script>
+        <script> function btn() { alert('Membership registration is complete.'); } </script>
+        <script type="text/javascript" src="/js/signup.js"></script>
+        <!-- <script src="https://code.jquery.com/jquery-latest.js"></script> -->
+
+
+        <script>
+            // Get the modal
+            var modal = document.getElementById('id01');
+
+            // When the user clicks anywhere outside of the modal, close it
+            window.onclick = function (event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
+            }
+        </script>
+
+        <!-- see how it work클릭하면 스크롤내려감 -->
+        <script>
+
+            jQuery(document).ready(function ($) {
+
+                $(".scroll").click(function (event) {
+
+                    event.preventDefault();
+
+                    $('html,body').animate({ scrollTop: $(this.hash).offset().top }, 500);
+
+                });
+
+            });
+
+        </script>
+        <script>
+            function goTop() {
+                document.documentElement.scrollTop = 0;
+            }
+
+        </script>
+
+</body>
+
+</html>
