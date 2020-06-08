@@ -9,11 +9,11 @@ body {
     margin-left: 10%;
     margin-right: 10%;
     margin-top: 10%;
-    margin-bottom: 10%;
+    margin-bottom: 3%;
     font-size: 1.2rem;
     outline: none;
     border: none;
-    background-image: linear-gradient(to right, #8c2a7c, #b1359c, #ca4eb6);
+    background-image: linear-gradient(to right, #736aef, #9d8cf3,  #c4baf8);
     cursor: pointer;
     color: #fff;
     text-transform: uppercase;
@@ -41,7 +41,7 @@ button:hover {
 
 .imgcontainer {
     text-align: center;
-    margin: 24px 0 12px 0;
+    margin: 2px 0 30px 0;
     position: relative;
 }
 
@@ -86,10 +86,10 @@ span.psw {
 /* Modal Content/Box */
 
 .modal-content {
-    background-color: #fefefe;
-    margin: 5% auto 15% auto;
+    background-color: #fff;
+    margin: 3% auto 15% auto;
     /* 5% from the top, 15% from the bottom and centered */
-    border: 1px solid #888;
+    border: 1px solid #7a63ef;
     width: 30%;
     /* modal 크기 */
 }
@@ -97,9 +97,10 @@ span.psw {
 /* The Close Button (x) */
 
 .close {
+    /* x위치 */
     position: absolute;
-    right: 25px;
-    top: 0;
+    right: -30px;
+    top: -40px;
     color: #000;
     font-size: 35px;
     font-weight: bold;
@@ -123,9 +124,14 @@ span.psw {
     position: relative;
     display: grid;
     grid-template-columns: 7% 73%;
-    margin: 25px 50px;
+    margin: 25px 20px;
     padding: 5px 0;
     border-bottom: 2px solid #d9d9d9;
+}
+.input-div label.warning{
+    color: red !important;
+    animation:warning .3s ease;
+    animation-iteration-count: 3;
 }
 
 .input {
@@ -168,7 +174,7 @@ span.psw {
     bottom: -2px;
     width: 0;
     height: 2px;
-    background-color: #8c2a7c;
+    background-color: #7a63ef;
     transition: .3s;
 }
 
@@ -182,7 +188,7 @@ span.psw {
 
 .input-modal-div.focus .i i {
     /*마우스 갖다대면 아이콘 색 바뀜*/
-    color: #8c2a7c;
+    color: #74e0ef;
 }
 
 .input-modal-div.focus div h5 {
