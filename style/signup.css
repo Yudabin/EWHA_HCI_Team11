@@ -81,11 +81,6 @@ form h2{
     padding: 5px 0;
     border-bottom: 2px solid #d9d9d9;
 }
-.input-div label.warning{
-    color: red !important;
-    animation:warning .3s ease;
-    animation-iteration-count: 3;
-}
 
 .input-div:after, .input-div:before{
     content:'';
@@ -148,6 +143,12 @@ form h2{
     color: #999; /* 아이콘 옆 글자 색*/
     font-size: 18px;
     transition: .3s;
+}
+
+.input-div h5.warning{
+    color: red !important;
+    animation:warning .3s ease;
+    animation-iteration-count: 3;
 }
 
 .input{ /* textbox 디자인*/

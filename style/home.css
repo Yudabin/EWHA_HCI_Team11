@@ -1,15 +1,4 @@
-/**
-* Template Name: Folio - v2.0.1
-* Template URL: https://bootstrapmade.com/folio-bootstrap-portfolio-template/
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
-*/
 
-/*--------------------------------------------------------------
-# General
---------------------------------------------------------------*/
-
-/*내가만든 것 시작*/
 
 .form-group{
   width: 1;
@@ -362,43 +351,50 @@ font-size: 15px;
 /*  Aout
 /*-----------------------------------------------------------------------------------*/
 #about {
+background: url("../img/book1.png") repeat scroll center center/cover;
+height: 80vh;
 width: 100%;
-height: auto;
-background: #fff;
-padding-top: 190px;
 }
-
-/* #about .div-img-bg {
+/* 
+#about .div-img-bg {
 padding-bottom: 30px;
-border: 20px solid #b8a07e;
+border: 20px solid #74e0ef;
 }
 
 #about .div-img-bg .about-img img {
 width: 100%;
-box-shadow: 0px 0px 85px 0px rgba(0, 0, 0, 0.14);
+box-shadow: 0px 0px 85px 0px rgba(0, 0, 0, 0.10);
 margin-top: -60px;
 margin-left: 40px;
 height: 400px;
 -o-object-fit: cover;
 object-fit: cover;
-} */
+}  */
 
-/* 떡메모지 옆 글자 */
+/* 책 옆 글자 */
 #about .about-descr .p-heading {
-/* font-family: 'Playfair Display', serif; */
-font-size: 30px;
-width: 100%;
-/* text-align: left; */
-margin-top: 30px;
+/* font-family: 'Playfair Display', serif;
+font-size: 3rem;
+padding-top: 100px;
+padding-bottom: 20px;
+margin-left: 30px;
+max-width: 80%;
+text-align: center;
+color: #7a63ef; */
+
+max-width: 80%;
+text-align: center;
+font-size: 2rem;
+margin-bottom: 0;
 margin-left: 50px;
-max-width: 100%;
 color: #7a63ef;
 
 }
 
 #about .about-descr .separator {
-max-width: 100%;
-font-size: 20px;
+max-width: 80%;
+text-align: center;
+font-size: 1.7rem;
 margin-bottom: 0;
 margin-left: 50px;
 color: #000;
@@ -884,7 +880,7 @@ font-size: 13px;
 /** Width between 768px to 991px
 *  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 */
-@media (min-width: 768px) and (max-width: 991px) {
+@media (min-width: 0px) and (max-width: 991px) {
 /* Navbar */
 nav {
   padding: 10px 15px;
@@ -914,6 +910,9 @@ nav {
 .head-info .header-content .cmaster h1 {
   font-size: 32px;
 }
+#about{
+  background: #fff;
+}
 #about .div-img-bg {
   padding: 0;
 }
@@ -922,7 +921,8 @@ nav {
   margin-left: calc(0% - 0px);
 }
 #about .about-descr .p-heading {
-  font-size: 20px;
+  /* font-size: 20px; */
+  max-width: 100%;
 }
 #about .about-descr .separator {
   max-width: 100%;

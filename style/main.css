@@ -25,7 +25,7 @@ body {
 button:hover {
     opacity: 0.8;
 }
-.btn:hover{
+.modalbtn:hover{
     background-position: right; 
 }
 
@@ -243,12 +243,18 @@ span.psw {
 
 /* Change styles for span and cancel button on extra small screens */
 
-@media screen and (max-width: 300px) {
+/* 반응형 */
+@media screen and (max-width: 991px) {
     span.psw {
         display: block;
         float: none;
+    }
+    .modal-content{
+        width: 50%;
     }
     .cancelbtn {
         width: 100%;
     }
 }
+
+
