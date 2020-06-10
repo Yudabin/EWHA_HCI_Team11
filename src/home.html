@@ -175,18 +175,19 @@
     <main id="main">
 
         <!-- ======= About Section ======= -->
-        <div id="about" class="paddsection">
-            <div class="container1">
-                <div class="row justify-content-between">
-                    <div class="col-lg-4 ">
-                        <!-- <div class="div-img-bg">
+        <div id="target1">
+            <div id="about" class="paddsection">
+                <div class="container1">
+                    <div class="row justify-content-between">
+                        <div class="col-lg-4 ">
+                            <!-- <div class="div-img-bg">
                                 <div class="about-img">
                                     <img src="/img/diary.png" class="img-responsive" alt="me">
                                 </div>
                             </div> -->
-                    </div>
-                    <div class="col-lg-7">
-                        <!-- <div class="about-descr">
+                        </div>
+                        <div class="col-lg-7">
+                            <!-- <div class="about-descr">
                                 <p class="p-heading">im a ux /ui designer austin based who loves clean, simple & unique design. i also enjoy crafting
                                     brand identities, icons, & ilustration work. </p>
                                 <p class="separator">To an English person, it will seem like simplified English, as a skeptical Cambridge friend of
@@ -194,11 +195,12 @@
                                     person.
                                 </p>
                             </div> -->
-                        <div class="about-descr">
-                            <p class="p-heading">Personal Web Diary "Dear Diary"</p>
-                            <p class="separator">We came up with Web-based diary system ‘Dear Diary’ which provide ‘write/design’ service with
-                                various tools, ‘organize’ by certain category, ‘export’ as a pdf/png file.</p>
+                            <div class="about-descr">
+                                <p class="p-heading">Personal Web Diary "Dear Diary"</p>
+                                <p class="separator">We came up with Web-based diary system ‘Dear Diary’ which provide ‘write/design’ service
+                                    with various tools, ‘organize’ by certain category, ‘export’ as a pdf/png file.</p>
 
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -304,11 +306,11 @@
                 else if ($(pw1).val() == "") {
                     $(pw1).next('label').addClass('warning');
                 }
-                
+
                 // if($(email1).val() !="" && $(pw1).val() !=""){
                 //         // location.replace("homescreen.html")
                 //         location.href = "homescreen.html";
-                    
+
                 // }
             }
         </script>
@@ -335,37 +337,37 @@
         <!-- <script src="jquery-3.4.1.js"></script> -->
 
         <script>
-                // Get the modal
-                var modal = document.getElementById('id01');
+            // Get the modal
+            var modal = document.getElementById('id01');
 
-                // When the user clicks anywhere outside of the modal, close it
-                window.onclick = function (event) {
-                    if (event.target == modal) {
-                        modal.style.display = "none";
-                    }
+            // When the user clicks anywhere outside of the modal, close it
+            window.onclick = function (event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
                 }
+            }
         </script>
 
         <!-- see how it work클릭하면 스크롤내려감 -->
         <script>
 
-                jQuery(document).ready(function ($) {
+            jQuery(document).ready(function ($) {
 
-                    $(".scroll").click(function (event) {
+                $(".scroll").click(function (event) {
+                    
+                    event.preventDefault();
 
-                        event.preventDefault();
-
-                        $('html,body').animate({ scrollTop: $(this.hash).offset().top }, 500);
-
-                    });
+                    $('html,body').animate({ scrollTop: $(this.hash).offset().top }, 500);
 
                 });
 
+            });
+
         </script>
         <script>
-                function goTop() {
-                    document.documentElement.scrollTop = 0;
-                }
+            function goTop() {
+                document.documentElement.scrollTop = 0;
+            }
 
         </script>
 

@@ -355,7 +355,10 @@ background: url("../img/book1.png") repeat scroll center center/cover;
 height: 80vh;
 width: 100%;
 }
-/* 
+.scroll{
+  background-color: #fff;
+}
+/*
 #about .div-img-bg {
 padding-bottom: 30px;
 border: 20px solid #74e0ef;
