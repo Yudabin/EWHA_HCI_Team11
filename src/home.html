@@ -27,9 +27,9 @@
     <link href="/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
 
     <!-- Template Main CSS File -->
-    <link href="/style/home.css" rel="stylesheet">
-    <link href="/style/signup.css" rel="stylesheet">
-    <link href="/style/main.css" rel="stylesheet">
+    <link href="../style/home.css" rel="stylesheet">
+    <link href="../style/signup.css" rel="stylesheet">
+    <link href="../style/main.css" rel="stylesheet">
 
     <!-- =======================================================
   * Template Name: Folio - v2.0.1
@@ -139,7 +139,7 @@
                         <!-- <input type="submit" class="btn" value="Signup"> -->
                         <input id="sbtn" type="submit" class="btn" name="signup-button" value="Sign Up" onclick="javascript:btn()" />
 
-                        <input class="btn" onclick="document.getElementById('id01').style.display='block'" value="Login">
+                        <input type="button" class="btn" onclick="document.getElementById('id01').style.display='block'" value="Login">
                         <!-- <button class="btn" onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button> -->
                     </div>
                 </form>
@@ -163,7 +163,7 @@
                         </div>
                         <div>
                             <h5>E-mail</h5>
-                            <input class="input" type="password" id="email" autocomplete="off" required>
+                            <input class="input" type="text" id="email1" autocomplete="off" required>
                         </div>
                     </div>
                     <div class="input-modal-div b">
@@ -172,10 +172,11 @@
                         </div>
                         <div>
                             <h5>Password</h5>
-                            <input class="input" type="password" id"pw" autocomplete="off" required>
+                            <input class="input" type="password" id="pw1" autocomplete="off" required>
                         </div>
                     </div>
-                    <button class="modalbtn" type="submit" onclick="javascript:loginbtn()" >Login</button>
+                    <input id="sbtn" type="submit" class="modalbtn" name="login-button" value="Login" onclick="javascript:loginbtn()" />
+                    <!-- <button class="modalbtn" type="submit" onclick="javascript:loginbtn()" >Login</button> -->
                 </div>
             </form>
         </div>
@@ -374,20 +375,28 @@
 
                 }
             }
-            function loginbtn(){
-                // if ($(email).val() == "") {
-                //     $(email).next('label').addClass('warning');
-                // }
-                // else if ($(pw).val() == "") {
-                //     $(pw).next('label').addClass('warning');
-                // }
-                // else {
-                    location.href="homescreen.html";
-                // }
-            }
+            
+            
         </script>
 
+        <script>
+            
+            var email1 = document.getElementById("email1");
+            var pw1 = document.getElementById("pw1");
 
+            function loginbtn(){
+                if ($(email1).val() == "") {
+                    $(email1).next('label').addClass('warning');
+                }
+                else if ($(pw1).val() == "") {
+                    $(pw1).next('label').addClass('warning');
+                }
+                else{ 
+                // if($(email1).val() != "" && $(pw1).val() != ""){
+                    location.href="homescreen.html";
+                }
+            }
+        </script>
         <!-- End Services Section -->
 
         <!-- Vendor JS Files -->
