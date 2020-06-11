@@ -25,7 +25,7 @@ h6{
     background-color:black;
 }
 
-<style>
+
     .input-group {
         margin-top: 10px;
         margin-bottom: 10px;
@@ -181,7 +181,7 @@ h6{
 }
 
 #ii:hover{
-    overflow:visible
+    overflow:visible;
       width:110px;/*change this to whatever you want*/
      height:120px;/*change this to whatever you want*/
 }
@@ -221,13 +221,6 @@ h6{
 .h7 {
     font-size: 0.8rem;
 }
-
-
-
-
-<style>
-
-
 
 #label {
     font-size: 0.75rem;
@@ -362,4 +355,3 @@ table {
   color: #aaa;
   transition: 0.3s;
 }
-</style>

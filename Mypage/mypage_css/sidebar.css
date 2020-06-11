@@ -2,6 +2,14 @@
     margin-left:0;
     margin-right:0;
 }
+#logo{
+    width: 234px;
+    height: 70%;
+    margin-top: -13px;
+    margin-left: -20px;
+    margin-bottom: -15px;
+  }
+ 
 #sidebar-container {
     min-height: 100vh;
     background-color: #333;
