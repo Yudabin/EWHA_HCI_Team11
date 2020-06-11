@@ -31,31 +31,51 @@ body{
     /* display: flex;
     justify-content: flex-end;
     align-items: center; */
-    background: url("../img/logo.png") repeat scroll center center/cover;
+    background: url("../img/logo1.png") repeat scroll center center/cover;
     /* height: 50vh; */
     height: 50vh;
-    width: 95%;
+    width: 100%;
     margin: 150px 5px 30px 5px;
     display: flex;
 }
 .img h4{
     position:sticky;
     display: flex;
-    margin: 300px 0 30px 170px;
+    margin: 350px 0 30px 170px;
     font-size: 20px;
+    color: #000;
 }
-.img a{
+/* .img a{
     color: #333;
-}
+} */
 
 .img img{
     width:400px;
+}
+
+.aboutbtn {
+    display: block;
+    outline: none;
+    border: none;
+    height: 40px;
+    /* line-height: 50px; */
+    width: 150px;
+    position: relative;
+    background: linear-gradient(120deg, #d9d9d9 0%, #74e0ef 100%);
+    text-decoration: none;
+    text-align: center;
+    font-size: 18px;
+    color: #333;
+    border-radius: 4px;
+    
+    transition: background-image 150ms ease;
 }
 
 .signup-container{
     display: flex;
     align-items: center;
     text-align: center;
+    /* background-color: #7a63ef; */
     
 
 }

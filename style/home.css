@@ -371,7 +371,8 @@ object-fit: cover;
 
 /* 책 옆 글자 */
 #about .about-descr .p-heading {
-/* font-family: 'Playfair Display', serif;
+font-family: 'Playfair Display', serif;
+/*
 font-size: 3rem;
 padding-top: 100px;
 padding-bottom: 20px;
@@ -382,20 +383,24 @@ color: #7a63ef; */
 
 max-width: 80%;
 text-align: center;
-font-size: 2rem;
-margin-bottom: 0;
+font-size: 2.5rem;
+margin-bottom: 50px;
 margin-left: 50px;
 color: #7a63ef;
+line-height: 35px;
 
 }
 
 #about .about-descr .separator {
+  /* font-family: 'Roboto', sans-serif;
+  font-family: 'Roboto Mono', monospace; */
 max-width: 80%;
 text-align: center;
 font-size: 1.7rem;
 margin-bottom: 0;
 margin-left: 50px;
 color: #000;
+line-height: 35px;
 }
 
 /*--------------------------------------------------------------
