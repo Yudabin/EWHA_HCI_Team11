@@ -430,7 +430,8 @@ color: #000;
   letter-spacing: 0.1em;
   font-weight: 500;
   text-transform: uppercase;
-  display: block;
+  /* 글씨 아이콘 바로 옆에나오도록 */
+  /* display: block; */
 }
 
 .services-block .separator {
