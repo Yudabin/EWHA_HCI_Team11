@@ -1,0 +1,1385 @@
+
+<html>
+    
+    
+    <!-- js, css START-->
+    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">  <link rel="stylesheet" type="text/css" href="http://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+        <!-- Popper.JS -->
+       <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    
+ 
+            
+           
+            
+                <link href="../Mypage/mypage_css/sidebar.css" rel="stylesheet" type="text/css">
+                <link href="../Mypage/mypage_css/category.css" rel="stylesheet" type="text/css">
+                <link href="../Mypage/mypage_css/diarylist.css" rel="stylesheet" type="text/css">
+                           
+                            
+                            <!-- js, css  END-->
+                            
+                            
+                            <nav class="navbar navbar-expand-lg  navbar-custom">
+                                <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                                    <span class="navbar-toggler-icon"></span>
+                                </button>   <a class="navbar-brand" href="#">
+                                    <img id="logo" src="https://raw.githubusercontent.com/Yudabin/EWHA_HCI_Team11/master/img/logo.png" width="70" height="50"  alt="">
+                                        <span class="menu-collapsed">My Diary</span>
+                                        </a>
+                                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                                    <ul class="navbar-nav ml-auto">
+                                        <li class="nav-item active">
+                                            <button id="logoutbtn" type="button" >LOGOUT</button>
+                                            <!--               /<a class="nav-link" href="#top">LOGOUT<span class="sr-only">(current)</span></a>-->
+                                            
+                                        </li>
+                                        
+                                        <!-- This menu is hidden in bigger devices with d-sm-none.
+                                        The sidebar isn't proper for smaller screens imo, so this dropdown menu can keep all the useful sidebar itens exclusively for smaller screens  -->
+                                        <li class="nav-item dropdown d-sm-block d-md-none">
+                                            <a class="nav-link dropdown-toggle" href="#" id="smallerscreenmenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Menu </a>
+                                            <div class="dropdown-menu" aria-labelledby="smallerscreenmenu">
+                                                <a class="dropdown-item" href="#top">hjsahgjsa</a>
+                                                <a class="dropdown-item" href="#top">Profile</a>
+                                                <a class="dropdown-item" href="#top">Tasks</a>
+                                            </div>
+                                        </li><!-- Smaller devices menu END -->
+                                    </ul>
+                                </div>
+                            </nav><!-- NavBar END -->
+                            
+                            
+                            <!-- Bootstrap row -->
+                            <div class="row" id="body-row">
+                                <!-- Sidebar -->
+                                <div id="sidebar-container" class="sidebar-expanded d-none d-md-block">
+                                    <!-- d-* hiddens the Sidebar in smaller devices. Its itens can be kept on the Navbar 'Menu' -->
+                                    <!-- Bootstrap List Group -->
+                                    <ul class="list-group">
+                                        <!-- Separator with title -->
+                                        <li class="list-group-item sidebar-separator-title text-muted d-flex align-items-center menu-collapsed">
+                                            <small>MAIN MENU</small>
+                                        </li>
+                                        <!-- /END Separator -->
+                                      
+
+                                        <!-- Menu 1 -->
+                                        <a href="#" class="bg-dark list-group-item list-group-item-action">
+                                            <div class="d-flex w-100 justify-content-start align-items-center">
+                                                
+                                                <span class="fa fa-user fa-fw mr-3"></span>
+                                                <span class="menu-collapsed">My Page</span>
+                                                
+                                            </div>
+                                        </a>
+                                      
+                                        <!-- Menu 2-->
+                                       <a href="creatediary.html" class="bg-dark list-group-item list-group-item-action">
+                                            <div class="d-flex w-100 justify-content-start align-items-center">
+                                                <span class="fa fa-tasks fa-fw mr-3"></span>
+                                                <span class="menu-collapsed">Create Diary</span>
+                                                
+                                            </div>
+                                        </a>
+                                        
+                                        <!-- Separator with title -->
+                                        <li class="list-group-item sidebar-separator-title text-muted d-flex align-items-center menu-collapsed">
+                                            <small>OPTIONS</small>
+                                        </li>
+                                        <!-- /END Separator -->
+                                        <!-- Menu 3-->
+                                        <a href="analysis.html" class="bg-dark list-group-item list-group-item-action">
+                                            <div class="d-flex w-100 justify-content-start align-items-center">
+                                                
+                                                  <span class="fa fa-dashboard fa-fw mr-3"></span>
+                                                <span class="menu-collapsed">Analysis</span>
+                                            </div>
+                                        </a>
+                                        
+                                        <!-- Separator without title -->
+                                        <li class="list-group-item sidebar-separator menu-collapsed"></li>
+                                        <!-- /END Separator -->
+                                        <a href="#" class="bg-dark list-group-item list-group-item-action">
+                                            <div class="d-flex w-100 justify-content-start align-items-center">
+                                                <span class="fa fa-question fa-fw mr-3"></span>
+                                                <span class="menu-collapsed">Help</span>
+                                            </div>
+                                        </a>
+                                        <a href="#top" data-toggle="sidebar-colapse" class="bg-dark list-group-item list-group-item-action d-flex align-items-center">
+                                            <div class="d-flex w-100 justify-content-start align-items-center">
+                                                <span id="collapse-icon" class="fa fa-2x mr-3"></span>
+                                                <span id="collapse-text" class="menu-collapsed">Collapse</span>
+                                            </div>
+                                        </a>
+                                    </ul><!-- List Group END-->
+                                </div><!-- sidebar-container END -->
+                                
+                                
+                                
+                                
+                                
+                                
+                                
+                                <!-- MAIN -->
+                                <div id= "mypage" class="col-4" >
+                                    
+                                    <div class="row pt-4 pb-2 pl-4">
+                                        
+                                        <div id="category" class="card" >
+                                            
+                                            <div class="card-header "><h5>CATEGORIES</h5> </div>
+                                            <div class="card-body">
+                                                
+                                                
+                                                <div class="input-group">
+                                                    <span class="input-group-btn">   <button class="btn btn-default" type="button">
+                                                        <i class="fa fa-search" aria-hidden="true"></i></button>
+                                                    </span>
+                                                    <input type="search" id="accordion_search_bar" class="form-control" placeholder="search Category">
+                                                        
+                                                        
+                                                        <!-- /input-group -->
+                                                        
+                                                        </div>
+                                            </div>
+                                            
+                                            <!--header 끝-->
+                                            
+                                            
+                                            <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                                                <!--DAILY  시작-->
+                                                <a role="button"
+                                                    data-toggle="collapse"
+                                                    data-parent="#accordion"
+                                                    href="#collapseOne"
+                                                    aria-expanded="false"
+                                                    aria-controls="collapseOne">
+                                                    
+                                                    <div class="panel panel-group-flush" id="collapseOne_container">
+                                                        <div class="panel-heading" role="tab" id="headingOne">
+                                                            <h6 class="panel-title font-weight-light pl-3 pt-1">
+                                                                <span  class="fa fa-angle-double-right pr-1"   style="font-size:24px"></span>
+                                                                DAILY DIARY<style>
+                                                                    .dot {
+                                                                        height: 10px;
+                                                                        width: 10px;
+                                                                        background-color: lightblue;
+                                                                        border-radius: 50%;
+                                                                        display: inline-block;
+                                                                    }</style>
+                                                                
+                                                                <span class="dot"></span>
+                                                                
+                                                                
+                                                            </h6>
+                                                        </div>
+                                                        </a>
+                                                
+                                                
+                                                <div id="collapseOne" class="list-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                                                    <div class="panel-body">
+                                                        
+                                                        <table id= "cattable" class="table" height="50">
+                                                            <tr>
+                                                                <td>
+                                                                    
+                                                                    <a href="#" onclick="pic1()">My birthday party</a>
+                                                                    <span data-toggle="tooltip" title="delete this item" data-placement="top" class="close">&times;</span>
+                                                                    <p> &nbsp2020/04 /11
+                                                                    
+                                                                    
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    <a href="#" onclick="pic2()">HCI team meeting</a>
+                                                                    <span data-toggle="tooltip" title="delete this item" data-placement="top" class="close">&times;</span>
+                                                                    <p> &nbsp2020/06 /03
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    <a href="#" onclick="pic3()">Daily blog #01</a>
+                                                                    <span data-toggle="tooltip" title="delete this item" data-placement="top" class="close">&times;</span>
+                                                                    <p> &nbsp2020/01 /03
+                                                                </td>
+                                                            </tr>
+                                                            
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            
+                                            
+                                            <!--DAILY  끝-->
+                                            
+                                            
+                                            <!--WORKOUT 시작-->
+                                            <a class="collapsed"
+                                                role="button"
+                                                data-toggle="collapse"
+                                                data-parent="#accordion"
+                                                href="#collapseTwo"
+                                                aria-expanded="false"
+                                                aria-controls="collapseTwo">
+                                                <div class="panel panel-default" id="collapseTwo_Container">
+                                                    <div class="panel-heading" role="tab" id="headingTwo">
+                                                        <h6 class="panel-title font-weight-light  pl-3 pt-1">
+                                                            <span  class="fa fa-angle-double-right pr-1"   style="font-size:24px"></span>
+                                                            WORKOUT
+                                                            <style>
+                                                                .dot2 {
+                                                                    height: 10px;
+                                                                    width: 10px;
+                                                                    background-color: red;
+                                                                    border-radius: 50%;
+                                                                    display: inline-block;
+                                                                }</style>
+                                                            
+                                                            <span class="dot2"></span>
+                                                        </h6>
+                                                    </div>
+                                                    </a>
+                                            
+                                            
+                                            <div id="collapseTwo" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingTwo">
+                                                <div class="panel-body">
+                                                    <table  id= "cattable" class="table">
+                                                        <tr>
+                                                            <td>
+                                                                <a href="#" onclick="pic4()">Workout routine #02</a>
+                                                                <span data-toggle="tooltip" title="delete this item" data-placement="top" class="close">&times;</span>
+                                                                <p> &nbsp2020/01 /03
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                <a href="#" onclick="pic6()">Han river jogging</a>
+                                                                <span data-toggle="tooltip" title="delete this item" data-placement="top" class="close">&times;</span>
+                                                                
+                                                                </div>
+                                                
+                                                <p> &nbsp2019/12 /21
+                                                </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <a href="#" onclick="pic5()">Body profile D-5</a>
+                                                        <span   data-toggle="tooltip" title="delete this item" data-placement="top" class="close">&times;</span>
+                                                        <p> &nbsp2018/12 /12
+                                                    </td>
+                                                </tr>
+                                                
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--WORKOUT 끝-->
+                                    
+                                    <!--STUDY 시작-->
+                                    <a class="collapsed"
+                                        role="button"
+                                        data-toggle="collapse"
+                                        data-parent="#accordion"
+                                        href="#collapseThree"
+                                        aria-expanded="false"
+                                        aria-controls="collapseThree">
+                                        <div class="panel panel-default" id="collapseThree_Container">
+                                            <div class="panel-heading" role="tab" id="headingThree">
+                                                <h6 class="panel-title font-weight-light  pl-3 pt-1">
+                                                    
+                                                    <span  class="fa fa-angle-double-right pr-1"   style="font-size:24px"></span> STUDY PLANS<style>
+                                                        .dot3 {
+                                                            height: 10px;
+                                                            width: 10px;
+                                                            background-color: pink;
+                                                            border-radius: 50%;
+                                                            display: inline-block;
+                                                        }</style>
+                                                    
+                                                    <span class="dot3"></span>
+                                                    
+                                                    
+                                                    
+                                                </h6>
+                                            </div>
+                                            </a>
+                                    <div id="collapseThree" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingThree">
+                                        <div class="panel-body">
+                                            <table  id= "cattable" class="table">
+                                                <tr>
+                                                    <td>
+                                                        <a href="#" onclick="pic7()">Final term D-10</a>
+                                                        <span data-toggle="tooltip" title="delete this item" data-placement="top" class="close">&times;</span>
+                                                        <p> &nbsp2020/06 /12
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <a href="#" onclick="pic8()">HCI Final presentation</a>
+                                                        <span data-toggle="tooltip" title="delete this item" data-placement="top" class="close">&times;</span>
+                                                        <p> &nbsp2020/06 /22
+                                                    </td>
+                                                </tr>
+                                                
+                                        
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--STUDY  끝-->
+                            
+                            <!--TRAVEL 시작-->
+                            <a class="collapsed"
+                                role="button"
+                                data-toggle="collapse"
+                                data-parent="#accordion"
+                                href="#collapseFour"
+                                aria-expanded="false"
+                                aria-controls="collapseFour">
+                                <div class="panel panel-default" id="collapsefour_Container">
+                                    
+                                    <div class="panel-heading" role="tab" id="headingFour">
+                                        <h6 class="panel-title font-weight-light  pl-3 pt-1">
+                                            <span  class="fa fa-angle-double-right pr-1"   style="font-size:24px"></span>
+                                            TRAVEL
+                                            <style>
+                                                .dot4 {
+                                                    height: 10px;
+                                                    width: 10px;
+                                                    background-color:green;
+                                                    border-radius: 50%;
+                                                    display: inline-block;
+                                                }</style>
+                                            
+                                            <span class="dot4"></span>
+                                            
+                                            
+                                        </h6>
+                                    </div>
+                                    </a>
+                            <div id="collapseFour" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingFour">
+                                <div class="panel-body">
+                                    <table  id= "cattable" class="table">
+                                        <tr>
+                                            <td>
+                                                <a  href="#" onclick="pic9()">Trip to Seoul</a>
+                                                <span data-toggle="tooltip" title="delete this item" data-placement="top" class="close">&times;</span>
+                                                <p> &nbsp2020/02 /04
+                                                
+                                            </td>
+                                        </tr>
+                                        
+                                        
+                                        <tr>
+                                            <td>
+                                                <a  href="#" onclick="pic10()">Trip to China</a>
+                                                
+                                                <span data-toggle="tooltip" title="delete this item" data-placement="top" class="close">&times;</span>
+                                                <p> &nbsp2019/06 /19
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <a href="#" onclick="pic11()">LA tour</a>
+                                                <span data-toggle="tooltip" title="delete this item" data-placement="top" class="close">&times;</span>
+                                                <p> &nbsp2020/12 /12
+                                            </td>
+                                        </tr>
+                                        
+                                    </table>
+                                </div>
+                            </div>
+                            </div>
+                            <!--TRAVEL 끝-->
+                            
+                            
+                            
+                            
+                            
+                            </div>
+                            </div>
+                            </div>
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            <!--DIARY LIST text-muted-->
+                            <div class=" row  pl-4 pt-4" >
+                                <div class="card" >
+                                    <div class="card-header "><h5>DIARY LIST</h5> </div>
+                                    
+                                    <div class="card-body" id="card2">
+                                        <div class="input-group pb-4">
+                                            <span class="input-group-btn">   <button class="btn btn-default" type="button">
+                                                <i class="fa fa-search" aria-hidden="true"></i></button>
+                                            </span>
+                                            <input type="search" id="search" class="form-control " placeholder="search diary">
+                                                
+                                                <label id="label" for="datepicker">
+                                                    <div class="inputWithIcon " >
+                                                        <i class="fa fa-calendar" aria-hidden="true">   </i>
+                                                        <input id="datepicker" type="text" id="datepicker" autocomplete="off">
+                                                            
+                                                            </div>
+                                                </label>
+                                                
+                                                <!-- /input-group -->
+                                                
+                                                </div>
+                                        <div class="card" id='mycard' >
+                                            
+                                            <div class="d-flex justify-content-between align-items-center">
+                                                <div class="d-flex justify-content-between align-items-center">
+                                                    
+                                                    <div class="ml">
+                                                        <div class="h7 text-muted pl-1" id='date1'>2020 June 20</div>
+                                                        <div class="h5 bold pl-3" id='date'>20</div>
+                                                        
+                                                    </div>
+                                                </div>
+                                                <div>
+                                                    <div class="dropdown" >
+                                                        <button  class="btn btn-link dropdown-toggle " type="button" id="gedf-drop1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                            <i class="fa fa-ellipsis-h"></i>
+                                                        </button>
+                                                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="gedf-drop1">
+                                                            <div class="h6 dropdown-header">option</div>
+                                                            <a class="dropdown-item" href="#">hide</a>
+                                                            
+                                                        </div>
+                                                    </div>
+                                                    
+                                                    
+                                                </div>
+                                            </div>
+                                            
+                                            
+                                            
+                                            
+                                            
+                                            <div class="card-body" >
+                                                <div class='row'>
+                                                    <div class='col-3'>
+                                                        <img id='ii' class="rounded pt-3" width="80" height="80" src="../Mypage/img/diary8.png" alt="">
+                                                            </div>
+                                                    
+                                                    <div class='col pl-2'>
+                                                        <div class="text-muted h7 "> <i class="fa fa-clock-o"></i> 2 days ago</div>
+                                                        <a class="card-link" href="#first" onclick="pic1()">
+                                                            <h6> HCI Final presentation</h6>
+                                                        </a>
+                                                        
+                                                        <p>
+                                                        THE day is coming. the day for the final presentaion...
+                                                        </p>
+                                                        
+                                                        <span class="badge badge-primary">STUDY PLANS</span>
+                                                        
+                                                        <div>
+                                                            
+                                                        </div>
+                                                    </div>
+                                                    
+                                                </div>
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                            </div>
+                                            
+                                            
+                                        </div>
+                                        <div class="card" id='mycard' >
+                                            
+                                            
+                                            <div class="d-flex justify-content-between align-items-center">
+                                                <div class="d-flex justify-content-between align-items-center">
+                                                    
+                                                    <div class="ml">
+                                                        <div class="h7 text-muted pl-1" id='date1'>2020 June 3</div>
+                                                        <div class="h5 bold pl-3" id='date'>3</div>
+                                                        
+                                                    </div>
+                                                    
+                                                    
+                                                    
+                                                </div>
+                                                <div>
+                                                    <div class="dropdown">
+                                                        <button class="btn btn-link dropdown-toggle" type="button" id="gedf-drop1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                            <i class="fa fa-ellipsis-h"></i>
+                                                        </button>
+                                                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="gedf-drop1">
+                                                            <div class="h6 dropdown-header">option</div>
+                                                            <a class="dropdown-item" href="#">hide</a>
+                                                            
+                                                        </div>
+                                                    </div>
+                                                    
+                                                    
+                                                </div>
+                                            </div>
+                                            
+                                            
+                                            
+                                            
+                                            
+                                            <div class="card-body" >
+                                                <div class='row'>
+                                                    <div class='col-3'>
+                                                        <img id='ii' class="rounded pt-3" width="80" height="80" src="../Mypage/img/diary1.png" alt="">
+                                                            </div>
+                                                    
+                                                    <div class='col pl-2'>
+                                                            <div class="text-muted h7 "> <i class="fa fa-clock-o"></i> 20 days ago</div>
+                                                            <a class="card-link" href="#first" onclick="pic1()">
+                                                                <h6> HCI team meeting</h6>
+                                                            </a>
+                                                            
+                                                            <p>
+                                                            Dear diary. Today I met my teammates for the first time..
+                                                            </p>
+                                                            
+                                                            <span class="badge badge-primary">DAILY DIARY</span>
+                                                            
+                                                            <div>
+                                                                
+                                                            </div>
+                                                        </div>
+                                                        
+                                                    </div>
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                            </div>
+                                            
+                                            
+                                        </div>
+                                        
+                                        
+                                        <div class="card" id='mycard' >
+                                                                                   
+                                                                                   
+                                                                                   <div class="d-flex justify-content-between align-items-center">
+                                                                                       <div class="d-flex justify-content-between align-items-center">
+                                                                                           
+                                                                                           <div class="ml">
+                                                                                               <div class="h7 text-muted pl-1" id='date1'>2020 February 4</div>
+                                                                                               <div class="h5 bold pl-3" id='date'>4</div>
+                                                                                               
+                                                                                           </div>
+                                                                                           
+                                                                                           
+                                                                                           
+                                                                                       </div>
+                                                                                      
+                                                                                   </div>
+                                                                                   
+                                                                                   
+                                                                                   
+                                                                                   
+                                                                                   
+                                                                                   <div class="card-body" >
+                                                                                       <div class='row'>
+                                                                                           <div class='col-3'>
+                                                                                               <img id='ii' class="rounded pt-3" width="80" height="80" src="../Mypage/img/diary9.png" alt="">
+                                                                                                   </div>
+                                                                                           
+                                                                                           <div class='col pl-2'>
+                                                                                               <div class="text-muted h7 "> <i class="fa fa-clock-o"></i> 4 months ago</div>
+                                                                                               <a class="card-link" href="#">
+                                                                                                   <h6>Trip to Seoul</h6>
+                                                                                               </a>
+                                                                                               
+                                                                                               <p>
+                                                                                               My first time visiting Seoul, South Korea. I had heard..
+                                                                                               </p>
+                                                                                               
+                                                                                               <span class="badge badge-primary">TRAVEL</span>
+                                                                                               
+                                                                                               <div>
+                                                                                                   
+                                                                                               </div>
+                                                                                           </div>
+                                                                                           
+                                                                                       </div>
+                                                                                       
+                                                                                       
+                                                                                       
+                                                                                       
+                                                                                       
+                                                                                       
+                                                                                       
+                                                                                       
+                                                                                   </div>
+                                                                                   
+                                                                                   
+                                                                               </div>
+                                        <div class="card" id='mycard' >
+                                                                                   
+                                                                                   
+                                                                                   <div class="d-flex justify-content-between align-items-center">
+                                                                                       <div class="d-flex justify-content-between align-items-center">
+                                                                                           
+                                                                                           <div class="ml">
+                                                                                               <div class="h7 text-muted pl-1" id='date1'>2020 January 3</div>
+                                                                                               <div class="h5 bold pl-3" id='date'>3</div>
+                                                                                               
+                                                                                           </div>
+                                                                                           
+                                                                                           
+                                                                                           
+                                                                                       </div>
+                                                                                       <div>
+                                                                                           <div class="dropdown">
+                                                                                               <button class="btn btn-link dropdown-toggle" type="button" id="gedf-drop1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                                                                   <i class="fa fa-ellipsis-h"></i>
+                                                                                               </button>
+                                                                                               <div class="dropdown-menu dropdown-menu-right" aria-labelledby="gedf-drop1">
+                                                                                                   <div class="h6 dropdown-header">option</div>
+                                                                                                   <a class="dropdown-item" href="#">hide</a>
+                                                                                                   
+                                                                                               </div>
+                                                                                           </div>
+                                                                                           
+                                                                                           
+                                                                                       </div>
+                                                                                   </div>
+                                                                                   
+                                                                                   
+                                                                                   
+                                                                                   
+                                                                                   
+                                                                                   <div class="card-body" >
+                                                                                       <div class='row'>
+                                                                                           <div class='col-3'>
+                                                                                               <img id='ii' class="rounded pt-3" width="80" height="80" src="../Mypage/img/diary3.png" alt="">
+                                                                                                   </div>
+                                                                                           
+                                                                                           <div class='col pl-2'>
+                                                                                               <div class="text-muted h7 "> <i class="fa fa-clock-o"></i> 5 month ago</div>
+                                                                                               <a class="card-link" href="#">
+                                                                                                   <h6>Workout routine #02</h6>
+                                                                                               </a>
+                                                                                               
+                                                                                               <p>
+                                                                                               Dear diary. woke up at 7am. Went to gym....
+                                                                                               </p>
+                                                                                               
+                                                                                               <span class="badge badge-primary">DAILY DIARY</span>
+                                                                                               
+                                                                                               <div>
+                                                                                                   
+                                                                                               </div>
+                                                                                           </div>
+                                                                                           
+                                                                                       </div>
+                                                                                       
+                                                                                       
+                                                                                       
+                                                                                       
+                                                                                       
+                                                                                       
+                                                                                       
+                                                                                       
+                                                                                   </div>
+                                                                                   
+                                                                                   
+                                                                               </div>
+                                        
+                                        
+                                        <div class="card" id='mycard' >
+                                                                                   
+                                                                                   
+                                                                                   <div class="d-flex justify-content-between align-items-center">
+                                                                                       <div class="d-flex justify-content-between align-items-center">
+                                                                                           
+                                                                                           <div class="ml">
+                                                                                               <div class="h7 text-muted pl-1" id='date1'>2020 January 3</div>
+                                                                                               <div class="h5 bold pl-3" id='date'>3</div>
+                                                                                               
+                                                                                           </div>
+                                                                                           
+                                                                                           
+                                                                                           
+                                                                                       </div>
+                                                                                       <div>
+                                                                                           <div class="dropdown">
+                                                                                               <button class="btn btn-link dropdown-toggle" type="button" id="gedf-drop1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                                                                   <i class="fa fa-ellipsis-h"></i>
+                                                                                               </button>
+                                                                                               <div class="dropdown-menu dropdown-menu-right" aria-labelledby="gedf-drop1">
+                                                                                                   <div class="h6 dropdown-header">option</div>
+                                                                                                   <a class="dropdown-item" href="#">hide</a>
+                                                                                                   
+                                                                                               </div>
+                                                                                           </div>
+                                                                                           
+                                                                                           
+                                                                                       </div>
+                                                                                   </div>
+                                                                                   
+                                                                                   
+                                                                                   
+                                                                                   
+                                                                                   
+                                                                                   <div class="card-body" >
+                                                                                       <div class='row'>
+                                                                                           <div class='col-3'>
+                                                                                               <img id='ii' class="rounded pt-3" width="80" height="80" src="../Mypage/img/diary2.png" alt="">
+                                                                                                   </div>
+                                                                                           
+                                                                                           <div class='col pl-2'>
+                                                                                               <div class="text-muted h7 "> <i class="fa fa-clock-o"></i> 5 months ago</div>
+                                                                                               <a class="card-link" href="#">
+                                                                                                   <h6>My birthday party</h6>
+                                                                                               </a>
+                                                                                               
+                                                                                               <p>
+                                                                                               Today was my birthday. We had a grate time...
+                                                                                               </p>
+                                                                                               
+                                                                                               <span class="badge badge-primary">DAILY DIARY</span>
+                                                                                               
+                                                                                               <div>
+                                                                                                   
+                                                                                               </div>
+                                                                                           </div>
+                                                                                           
+                                                                                       </div>
+                                                                                       
+                                                                                       
+                                                                                       
+                                                                                       
+                                                                                       
+                                                                                       
+                                                                                       
+                                                                                       
+                                                                                   </div>
+                                                                                   
+                                                                                   
+                                                                               </div>
+                                        
+                                        
+                                        
+                                        <div class="card" id='mycard' >
+                                                                                   
+                                                                                   
+                                                                                   <div class="d-flex justify-content-between align-items-center">
+                                                                                       <div class="d-flex justify-content-between align-items-center">
+                                                                                           
+                                                                                           <div class="ml">
+                                                                                               <div class="h7 text-muted pl-1" id='date1'>2020 January 3</div>
+                                                                                               <div class="h5 bold pl-3" id='date'>3</div>
+                                                                                               
+                                                                                           </div>
+                                                                                           
+                                                                                           
+                                                                                           
+                                                                                       </div>
+                                                                                       <div>
+                                                                                           <div class="dropdown">
+                                                                                               <button class="btn btn-link dropdown-toggle" type="button" id="gedf-drop1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                                                                   <i class="fa fa-ellipsis-h"></i>
+                                                                                               </button>
+                                                                                               <div class="dropdown-menu dropdown-menu-right" aria-labelledby="gedf-drop1">
+                                                                                                   <div class="h6 dropdown-header">option</div>
+                                                                                                   <a class="dropdown-item" onclick="hide()">hide</a>
+                                                                                                   
+                                                                                               </div>
+                                                                                           </div>
+                                                                                           
+                                                                                           
+                                                                                       </div>
+                                                                                   </div>
+                                                                                   
+                                                                                   
+                                                                                   
+                                                                                   
+                                                                                   
+                                                                                   <div class="card-body" >
+                                                                                       <div class='row'>
+                                                                                           <div class='col-3'>
+                                                                                               <img id='ii' class="rounded pt-3" width="80" height="80" src="../Mypage/img/diary4.png" alt="">
+                                                                                                   </div>
+                                                                                           
+                                                                                           <div class='col pl-2'>
+                                                                                               <div class="text-muted h7 "> <i class="fa fa-clock-o"></i> 5 months ago</div>
+                                                                                               <a class="card-link" href="#">
+                                                                                                   <h6>Daily blog #01</h6>
+                                                                                               </a>
+                                                                                               
+                                                                                               <p>
+                                                                                               Dear diary. Today I did some cleaning. I love cleaning...
+                                                                                               </p>
+                                                                                               
+                                                                                               <span class="badge badge-primary">DAILY DIARY</span>
+                                                                                               
+                                                                                               <div>
+                                                                                                   
+                                                                                               </div>
+                                                                                           </div>
+                                                                                           
+                                                                                       </div>
+                                                                                       
+                                                                                       
+                                                                                       
+                                                                                       
+                                                                                       
+                                                                                       
+                                                                                       
+                                                                                       
+                                                                                   </div>
+                                                                                   
+                                                                                   
+                                                                               </div>
+                                        
+                                        
+                                        <div class="card" id='mycard' >
+                                            <div class="d-flex justify-content-between align-items-center">
+                                                <div class="d-flex justify-content-between align-items-center">
+                                                    
+                                                    <div class="ml">
+                                                        <div class="h7 text-muted  pl-1" id='date1'>2019 December 21</div>
+                                                        <div class="h5 bold  pl-3" id='date'>21</div>
+                                                        
+                                                    </div>
+                                                </div>
+                                                <div>
+                                                    <div class="dropdown" >
+                                                        <button  class="btn btn-link dropdown-toggle " type="button" id="gedf-drop1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                            <i class="fa fa-ellipsis-h"></i>
+                                                        </button>
+                                                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="gedf-drop1">
+                                                            <div class="h6 dropdown-header">option</div>
+                                                            <a class="dropdown-item" href="#">hide</a>
+                                                            
+                                                        </div>
+                                                    </div>
+                                                    
+                                                    
+                                                </div>
+                                            </div>
+                                            
+                                            
+                                            
+                                            
+                                            
+                                            <div class="card-body" >
+                                                <div class='row'>
+                                                    <div class='col-3'>
+                                                        <img id='ii' class="rounded pt-3" width="80" height="80" src="../Mypage/img/diary6.png" alt="">
+                                                            </div>
+                                                    
+                                                    <div class='col pl-2'>
+                                                        <div class="text-muted h7 "> <i class="fa fa-clock-o"></i> 7 month ago</div>
+                                                        <a class="card-link" href="#">
+                                                            <h6> Han river jogging</h6>
+                                                        </a>
+                                                        
+                                                        <p>
+                                                        My favorite place to go for a walk is Han river. Biking, Eat chicken...
+                                                        </p>
+                                                        
+                                                        <span class="badge badge-primary">WORKOUT</span>
+                                                        
+                                                        <div>
+                                                            
+                                                        </div>
+                                                    </div>
+                                                    
+                                                </div>
+                                                
+                                            </div>
+                                            
+                                        </div><!-- row p-4 END -->
+                                        
+                                    </div>
+                                    
+                                </div>
+                                
+                                
+                                
+                            </div>
+                            
+                            
+                            
+                            
+                            
+                            
+                            </div>
+                            
+                            <div class='col pl-5 pr-5 pt-4'>
+                                <div class="card " >
+                                    <div class="card-header "><h5>MY DIARY</h5></div>
+                                    <div class="card-body h-100" >
+                                        
+                                       <button id='pencil' type="button" onclick="creatediary.html"> <span  class="fa fa-pencil   " aria-hidden="true" ></span></button><p>
+                                        <img id="first" src= "../Mypage/img/diary2.png" class="img-fluid" alt="Responsive image"></img>
+                                        
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                            
+                            
+                            
+                            </div>
+                            
+                            
+                            <script>
+                                // When the user scrolls the page, execute myFunction
+                                window.onscroll = function() {myFunction()};
+                                
+                                function myFunction() {
+                                    var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+                                    var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+                                    var scrolled = (winScroll / height) * 100;
+                                                    document.getElementById("myBar").style.width = scrolled + "%";
+                                                    }
+                                                    </script>
+                            
+                            <script>
+                                /*.not(':first')*/
+                                $('.panel-group').collapse(); // Collapse all but the first row on the page.
+                                
+                                // This section makes the search work.
+                                (function() {
+                                    var searchTerm, panelContainerId;
+                                    $('#accordion_search_bar').on('change keyup', function() {
+                                        searchTerm = $(this).val();
+                                        $('#accordion > .panel').each(function() {
+                                            panelContainerId = '#' + $(this).attr('id');
+                                            
+                                            // Makes search to be case insesitive
+                                            $.extend($.expr[':'], {
+                                                'contains': function(elem, i, match, array) {
+                                                    return (elem.textContent || elem.innerText || '').toLowerCase()
+                                                    .indexOf((match[3] || "").toLowerCase()) >= 0;
+                                                }
+                                            });
+                                            
+                                            // END Makes search to be case insesitive
+                                            
+                                            // Show and Hide Triggers
+                                            $(panelContainerId + ':not(:contains(' + searchTerm + '))').hide(); //Hide the rows that done contain the search query.
+                                            $(panelContainerId + ':contains(' + searchTerm + ')').show(); //Show the rows that do!
+                                            
+                                            
+                                            
+                                        });
+                                    });
+                                }());
+                            // End Show and Hide Triggers
+                            
+                            // END This section makes the search work.
+                                </script>
+                            <script>// Utility function
+                                function Util () {};
+                                
+                                /*
+                                 class manipulation functions
+                                 */
+                            Util.hasClass = function(el, className) {
+                                if (el.classList) return el.classList.contains(className);
+                                else return !!el.className.match(new RegExp('(\\s|^)' + className + '(\\s|$)'));
+                            };
+                            
+                            Util.addClass = function(el, className) {
+                                var classList = className.split(' ');
+                                if (el.classList) el.classList.add(classList[0]);
+                                else if (!Util.hasClass(el, classList[0])) el.className += " " + classList[0];
+                                if (classList.length > 1) Util.addClass(el, classList.slice(1).join(' '));
+                            };
+                            
+                            Util.removeClass = function(el, className) {
+                                var classList = className.split(' ');
+                                if (el.classList) el.classList.remove(classList[0]);
+                                else if(Util.hasClass(el, classList[0])) {
+                                    var reg = new RegExp('(\\s|^)' + classList[0] + '(\\s|$)');
+                                    el.className=el.className.replace(reg, ' ');
+                                }
+                                if (classList.length > 1) Util.removeClass(el, classList.slice(1).join(' '));
+                            };
+                            
+                            Util.toggleClass = function(el, className, bool) {
+                                if(bool) Util.addClass(el, className);
+                                else Util.removeClass(el, className);
+                            };
+                            
+                            Util.setAttributes = function(el, attrs) {
+                                for(var key in attrs) {
+                                    el.setAttribute(key, attrs[key]);
+                                }
+                            };
+                            
+                            /*
+                             DOM manipulation
+                             */
+                            Util.getChildrenByClassName = function(el, className) {
+                                var children = el.children,
+                                childrenByClass = [];
+                                for (var i = 0; i < el.children.length; i++) {
+                                    if (Util.hasClass(el.children[i], className)) childrenByClass.push(el.children[i]);
+                                }
+                                return childrenByClass;
+                            };
+                            
+                            /*
+                             Animate height of an element
+                             */
+                            Util.setHeight = function(start, to, element, duration, cb) {
+                                var change = to - start,
+                                currentTime = null;
+                                
+                                var animateHeight = function(timestamp){
+                                    if (!currentTime) currentTime = timestamp;
+                                    var progress = timestamp - currentTime;
+                                    var val = parseInt((progress/duration)*change + start);
+                                                        element.setAttribute("style", "height:"+val+"px;");
+                                                        if(progress < duration) {
+                                        window.requestAnimationFrame(animateHeight);
+                                    } else {
+                                        cb();
+                                    }
+                                                        };
+                                                        
+                                                        //set the height of the element before starting animation -> fix bug on Safari
+                                                        element.setAttribute("style", "height:"+start+"px;");
+                                                        window.requestAnimationFrame(animateHeight);
+                                                        };
+                                                        
+                                                        /*
+                                                         Smooth Scroll
+                                                         */
+                                                        
+                                                        Util.scrollTo = function(final, duration, cb) {
+                                        var start = window.scrollY || document.documentElement.scrollTop,
+                                        currentTime = null;
+                                        
+                                        var animateScroll = function(timestamp){
+                                            if (!currentTime) currentTime = timestamp;
+                                            var progress = timestamp - currentTime;
+                                            if(progress > duration) progress = duration;
+                                            var val = Math.easeInOutQuad(progress, start, final-start, duration);
+                                            window.scrollTo(0, val);
+                                            if(progress < duration) {
+                                                window.requestAnimationFrame(animateScroll);
+                                            } else {
+                                                cb && cb();
+                                            }
+                                        };
+                                        
+                                        window.requestAnimationFrame(animateScroll);
+                                    };
+                                                        
+                                                        /*
+                                                         Focus utility classes
+                                                         */
+                                                        
+                                                        //Move focus to an element
+                                                        Util.moveFocus = function (element) {
+                                        if( !element ) element = document.getElementsByTagName("body")[0];
+                                        element.focus();
+                                        if (document.activeElement !== element) {
+                                            element.setAttribute('tabindex','-1');
+                                            element.focus();
+                                        }
+                                                        };
+                                                        
+                                                        /*
+                                                         Misc
+                                                         */
+                                                        
+                                                        Util.getIndexInArray = function(array, el) {
+                                        return Array.prototype.indexOf.call(array, el);
+                                    };
+                                                        
+                                                        Util.cssSupports = function(property, value) {
+                                        if('CSS' in window) {
+                                            return CSS.supports(property, value);
+                                        } else {
+                                            var jsProperty = property.replace(/-([a-z])/g, function (g) { return g[1].toUpperCase();});
+                                            return jsProperty in document.body.style;
+                                        }
+                                                        };
+                                                        
+                                                        /*
+                                                         Polyfills
+                                                         */
+                                                        //Closest() method
+                                                        if (!Element.prototype.matches) {
+                                        Element.prototype.matches = Element.prototype.msMatchesSelector || Element.prototype.webkitMatchesSelector;
+                                    }
+                                                        
+                                                        if (!Element.prototype.closest) {
+                                        Element.prototype.closest = function(s) {
+                                            var el = this;
+                                            if (!document.documentElement.contains(el)) return null;
+                                            do {
+                                                if (el.matches(s)) return el;
+                                                el = el.parentElement || el.parentNode;
+                                            } while (el !== null && el.nodeType === 1);
+                                            return null;
+                                        };
+                                                        }
+                                                        
+                                                        //Custom Event() constructor
+                                                        if ( typeof window.CustomEvent !== "function" ) {
+                                        
+                                        function CustomEvent ( event, params ) {
+                                            params = params || { bubbles: false, cancelable: false, detail: undefined };
+                                            var evt = document.createEvent( 'CustomEvent' );
+                                            evt.initCustomEvent( event, params.bubbles, params.cancelable, params.detail );
+                                            return evt;
+                                        }
+                                        
+                                        CustomEvent.prototype = window.Event.prototype;
+                                        
+                                        window.CustomEvent = CustomEvent;
+                                    }
+                                                        
+                                                        /*
+                                                         Animation curves
+                                                         */
+                                                        Math.easeInOutQuad = function (t, b, c, d) {
+                                        t /= d/2;
+                                        if (t < 1) return c/2*t*t + b;
+                                        t--;
+                                        return -c/2 * (t*(t-2) - 1) + b;
+                                    };
+                                                        </script> <!-- util functions included in the CodyHouse framework -->
+                            <script>(function() {
+                                // Multi-Level Accordion Menu - by CodyHouse.co
+                                var accordionsMenu = document.getElementsByClassName('cd-accordion--animated');
+                                
+                                if( accordionsMenu.length > 0 && window.requestAnimationFrame) {
+                                    for(var i = 0; i < accordionsMenu.length; i++) {(function(i){
+                                        accordionsMenu[i].addEventListener('change', function(event){
+                                            animateAccordion(event.target);
+                                        });
+                                    })(i);}
+                                    
+                                    function animateAccordion(input) {
+                                        var bool = input.checked,
+                                        dropdown =  input.parentNode.getElementsByClassName('cd-accordion__sub')[0];
+                                        
+                                        Util.addClass(dropdown, 'cd-accordion__sub--is-visible'); // make sure subnav is visible while animating height
+                                        
+                                        var initHeight = !bool ? dropdown.offsetHeight: 0,
+                                        finalHeight = !bool ? 0 : dropdown.offsetHeight;
+                                        
+                                        Util.setHeight(initHeight, finalHeight, dropdown, 200, function(){
+                                            Util.removeClass(dropdown, 'cd-accordion__sub--is-visible');
+                                            dropdown.removeAttribute('style');
+                                        });
+                                    }
+                                }
+                            }());
+                                     </script>
+                            
+                            
+                            <script>
+                                var closebtns = document.getElementsByClassName("close");
+                                var i;
+                                
+                                for (i = 0; i < closebtns.length; i++) {
+                                    closebtns[i].addEventListener("click", function() {
+                                        
+                                        
+                                        var reply=      confirm("Delete this diary?");
+                                        
+                                        if(reply ==true)
+                                        {
+                                            alert(" delete complete")
+                                            this.parentElement.style.display = 'none';
+                                        }
+                                        
+                                        else if(reply == false){
+                                            
+                                        }
+                                    });
+                                }
+                            </script>
+                            
+                            <script>
+                                $(document).ready(function() {
+                                    $('[data-toggle="tooltip"]').tooltip();
+                                    
+                                });
+                            
+                            
+                                </script>
+                            <script>
+                                // Hide submenus
+                                $('#body-row .collapse').collapse('hide');
+                                
+                                // Collapse/Expand icon
+                                $('#collapse-icon').addClass('fa-angle-double-left');
+                                
+                                // Collapse click
+                                $('[data-toggle=sidebar-colapse]').click(function() {
+                                    SidebarCollapse();
+                                });
+                            
+                            function SidebarCollapse () {
+                                $('.menu-collapsed').toggleClass('d-none');
+                                $('.sidebar-submenu').toggleClass('d-none');
+                                $('.submenu-icon').toggleClass('d-none');
+                                $('#sidebar-container').toggleClass('sidebar-expanded sidebar-collapsed');
+                                
+                                // Treating d-flex/d-none on separators with title
+                                var SeparatorTitle = $('.sidebar-separator-title');
+                                if ( SeparatorTitle.hasClass('d-flex') ) {
+                                    SeparatorTitle.removeClass('d-flex');
+                                } else {
+                                    SeparatorTitle.addClass('d-flex');
+                                }
+                                
+                                // Collapse/Expand icon
+                                $('#collapse-icon').toggleClass('fa-angle-double-left fa-angle-double-right');
+                            }
+                            </script>
+                            
+                            <script>
+                                $(document).ready(function() {
+                                    
+                                    
+                                    
+                                    $('#datatable').dataTable({
+                                        
+                                        "paging":false,
+                                        "info":false,
+                                        "scrollY":  "200px",
+                                        "scrollCollapse": true
+                                        
+                                        
+                                        
+                                        
+                                    });
+                                    
+                                    
+                                    $('[data-toggle="tooltip"]').tooltip()
+                                    // $(.'close').tooltip('show')
+                                    
+                                    
+                                    
+                                } );
+                            
+                            
+                          
+                            function pic1()
+                            {
+                                document.getElementById("first").src = "../Mypage/img/diary2.png";
+                            }
+                            function pic2()
+                            {
+                                document.getElementById("first").src ="../Mypage/img/diary1.png";
+                            }
+                            function pic3()
+                            {
+                                document.getElementById("first").src ="../Mypage/img/diary4.png";
+                            }
+                            function pic4()
+                            {
+                                document.getElementById("first").src ="../Mypage/img/diary3.png";
+                            }
+                            function pic5()
+                            {
+                                document.getElementById("first").src ="../Mypage/img/diary5.png";
+                            }
+                            function pic6()
+                            {
+                                document.getElementById("first").src ="../Mypage/img/diary6.png";
+                            }
+                            function pic7()
+                            {
+                                document.getElementById("first").src ="../Mypage/img/diary7.png";
+                            }
+                            function pic8()
+                            {
+                                document.getElementById("first").src ="../Mypage/img/diary8.png";
+                            }
+                            function pic9()
+                            {
+                                document.getElementById("first").src ="../Mypage/img/diary9.png";
+                            }
+                            function pic10()
+                            {
+                                document.getElementById("first").src ="../Mypage/img/diary10.png";
+                            }
+                            function pic11()
+                            {
+                                document.getElementById("first").src ="../Mypage/img/diary11.png";
+                            }
+                            
+                        
+                            
+                            
+                            $(document).ready(function(){
+                                $('.toast').toast('show');
+                            });
+                            </script>
+                            <script>
+                                $('.panel-heading').on('click', function(e) {
+                                    $(this).find('[class*="angle"]').toggleClass('fa-angle-left fa-angle-down')
+                                });
+                            </script>
+                            <script>
+                                
+                                $(document).ready(function(){
+                                    $('#search').on("keyup", function() {
+                                        var value = $(this).val().toLowerCase();
+                                        $("#mycard ").filter(function() {
+                                            $(this).toggle($(this).find('.card-link').text().toLowerCase().indexOf(value) > -1)
+                                        });
+                                    });
+                                });
+                            </script>
+                            <script>
+                                
+                                $( function() {
+                                    $( "#datepicker" ).datepicker({
+                                        dateFormat: "dd-mm-yy"
+                                        ,    duration: "fast",
+                                        onSelect: function(dateText, inst) {
+                                           var dateAsString = dateText; //the first parameter of this function
+                                           var time = $(this).datepicker({ dateFormat: 'dd,MM,yyyy' }).val(); //the getDate method
+                                         time = time.split('-');
+                                             alert(time);
+                                        }
+                                        
+                                    
+                                    });
+                                    
+                                  
+                                } );
+                            
+                            function hide(){
+                                
+                                 $('.dropdown-toggle').collapse('hide');
+                                
+                            }
+                          
+                            </script>
+                            
+                    
+</html>
+
