@@ -31,47 +31,17 @@
 
 <body>
 
-    <nav class="navbar navbar-expand-lg  navbar-custom">
-        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
-            aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <a class="navbar-brand" href="#">
-            <!-- <img id="logo" src="../img/logo_black.png" alt=""> -->
-            <span class="menu-collapsed"><img id="logo" src="../img/logo_gray.png" alt=""></span>
-        </a>
-        <div class="collapse navbar-collapse" id="navbarNavDropdown">
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item active">
-                    <button id="logoutbtn" type="button">LOGOUT</button>
-                    <!--               /<a class="nav-link" href="#top">LOGOUT<span class="sr-only">(current)</span></a>-->
-
-                </li>
-
-                <!-- This menu is hidden in bigger devices with d-sm-none.
-                                            The sidebar isn't proper for smaller screens imo, so this dropdown menu can keep all the useful sidebar itens exclusively for smaller screens  -->
-                <li class="nav-item dropdown d-sm-block d-md-none">
-                    <a class="nav-link dropdown-toggle" href="#" id="smallerscreenmenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Menu </a>
-                    <div class="dropdown-menu" aria-labelledby="smallerscreenmenu">
-                        <a class="dropdown-item" href="#top">hjsahgjsa</a>
-                        <a class="dropdown-item" href="#top">Profile</a>
-                        <a class="dropdown-item" href="#top">Tasks</a>
-                    </div>
-                </li>
-                <!-- Smaller devices menu END -->
-            </ul>
-        </div>
-    </nav>
-    <!-- NavBar END -->
-
-
     <!-- Bootstrap row -->
     <div class="row" id="body-row">
         <!-- Sidebar -->
         <div id="sidebar-container" class="sidebar-expanded d-none d-md-block">
             <!-- d-* hiddens the Sidebar in smaller devices. Its itens can be kept on the Navbar 'Menu' -->
             <!-- Bootstrap List Group -->
+            <span class="menu-collapsed">
+                <a href="home.html">
+                    <img id="logo" src="../img/logo_gray.png" alt="">
+                </a>
+            </span>
             <ul class="list-group">
                 <!-- Separator with title -->
                 <!-- <img id="logo" src="../img/logo_black.png" alt=""> -->
@@ -135,20 +105,54 @@
 
 
         <!-- MAIN -->
-        
 
-            <!-- <div class="row pt-4 pb-2 pl-4"> -->
 
-            <!-- The App Section -->
-            <div class="wrapper">
-                <div class="container">
+        <!-- <div class="row pt-4 pb-2 pl-4"> -->
+
+        <!-- The App Section -->
+        <div class="wrapper">
+            <div class="container">
+                <div class="row">
+                    <div class="column-66-one">
+                        <h1 class="xlarge-font">
+                            <b>"Home"</b>
+                        </h1>
+                        <h1 class="large-font" style="color:#7a63ef;">
+                            <b>Sign up & Sign in</b>
+                        </h1>
+                        <p>
+                            <!-- <span style="font-size:36px">Take photos like a pro.</span> -->
+                            <br>- Click the 'aboutus' button under the logo on the home screen to view the introduction of the
+                            homepage.
+                            <br>- Enter your email, name, and password to sign up.
+                            <br>- Log in to the homepage with your registered email and password.</p>
+                        <!-- <button class="button">Download Application</button> -->
+                    </div>
+                    <div class="column-33-one">
+                        <video controls>
+                            <source src="../img/login.mp4" type="video/mp4">
+                        </video>
+                        <!-- <img src="../img/diary.png" width="335" height="471"> -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- Clarity Section -->
+            <div id="c2">
+                <div id="c2" class="container">
                     <div class="row">
-                        <div class="column-66">
+                        <div class="column-33-two">
+                            <video controls>
+                                <source src="../img/login.mp4" type="video/mp4">
+                            </video>
+                            <!-- <img src="../img/diary.png" width="335" height="471"> -->
+                        </div>
+                        <div class="column-66-two">
                             <h1 class="xlarge-font">
-                                <b>"Home"</b>
+                                <b>"My Page"</b>
                             </h1>
                             <h1 class="large-font" style="color:#7a63ef;">
-                                <b>Sign up & Sign in</b>
+                                <b>사용법</b>
                             </h1>
                             <p>
                                 <span style="font-size:36px">Take photos like a pro.</span>
@@ -157,72 +161,40 @@
                                 ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
                             <!-- <button class="button">Download Application</button> -->
                         </div>
-                        <div class="column-33">
-                            <video controls>
-                                <source src="../img/login.mp4" type="video/mp4">
-                            </video>
-                            <!-- <img src="../img/diary.png" width="335" height="471"> -->
-                        </div>
                     </div>
                 </div>
-
-                <!-- Clarity Section -->
-                <div class="container" style="background-color:#f1f1f1">
-                    <div class="row">
-                        <div class="column-33">
-                            <img src="../img/diary.png" alt="App" width="335" height="471">
-                        </div>
-                        <div class="column-66">
-                            <h1 class="xlarge-font">
-                                <b>"My Page"</b>
-                            </h1>
-                            <h1 class="large-font" style="color:#74e0ef;">
-                                <b>Pixels, who?</b>
-                            </h1>
-                            <p>
-                                <span style="font-size:24px">A revolution in resolution.</span> Sharp and clear photos with the world's best photo engine,
-                                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                                ullamco laboris nisi ut aliquipex ea commodo consequat. Duis aute irure dolor in reprehenderit
-                                in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-                            <!-- <button class="button" style="background-color:74e0ef">Read More</button> -->
-                        </div>
-                    </div>
-                </div>
-
-                <!-- The App Section -->
-                <div class="container">
-                    <div class="row">
-                        <div class="column-66">
-                            <h1 class="xlarge-font">
-                                <b>"Create Diary"</b>
-                            </h1>
-                            <h1 class="large-font" style="color:#7a63ef;">
-                                <b>Why buy it?</b>
-                            </h1>
-                            <p>
-                                <span style="font-size:36px">Take photos like a pro.</span> You should buy this app because lorem ipsum consectetur adipiscing
-                                elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-                                veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-                                pariatur.
-                            </p>
-                            <!-- <button class="button">Download Application</button> -->
-                        </div>
-                        <div class="column-33">
-                            <img src="../img/diary.png" width="335" height="471">
-                        </div>
-                    </div>
-                </div>
-
             </div>
+        
 
-
-
-
-
-
-
+        <!-- The App Section -->
+        <div class="container">
+            <div class="row">
+                <div class="column-66-three">
+                    <h1 class="xlarge-font">
+                        <b>"Create Diary"</b>
+                    </h1>
+                    <h1 class="large-font" style="color:#7a63ef;">
+                        <b>Write & Design</b>
+                    </h1>
+                    <p>
+                        <span style="font-size:36px">Take photos like a pro.</span>
+                        <br>You should buy this app because lorem ipsum consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                        ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                        nisi ut aliquip ex ea commodo consequat.</p>
+                    <!-- <button class="button">Download Application</button> -->
+                </div>
+                <div class="column-33-three">
+                    <video controls>
+                        <source src="../img/login.mp4" type="video/mp4">
+                    </video>
+                    <!-- <img src="../img/diary.png" width="335" height="471"> -->
+                </div>
+            </div>
         </div>
+
+    </div>
+
+    </div>
 
     </div>
 
