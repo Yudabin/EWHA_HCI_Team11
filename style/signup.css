@@ -34,7 +34,7 @@ body{
     background: url("../img/logo1.png") repeat scroll center center/cover;
     /* height: 50vh; */
     height: 50vh;
-    width: 100%;
+    width: 35vw;
     margin: 150px 5px 30px 5px;
     display: flex;
 }
