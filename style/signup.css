@@ -27,21 +27,20 @@ body{
     grid-gap: 7rem;
     padding: 0 2rem;
 }
-.img{
-    /* display: flex;
-    justify-content: flex-end;
+img{
+    /*justify-content: flex-end;
     align-items: center; */
-    background: url("../img/logo1.png") repeat scroll center center/cover;
+    /* background: url("../img/logo1.png") repeat scroll center center/cover; */
     /* height: 50vh; */
-    height: 50vh;
-    width: 35vw;
-    margin: 150px 5px 30px 5px;
+    height: 40vh;
+    width: 30vw;
+    margin: 150px 5px 0 50px;
     display: flex;
 }
 .img h4{
     position:sticky;
     display: flex;
-    margin: 350px 0 30px 170px;
+    margin: 0 0 0 220px;
     font-size: 20px;
     color: #000;
 }
@@ -49,9 +48,10 @@ body{
     color: #333;
 } */
 
-.img img{
-    width:400px;
-}
+/* .img img{
+    display: flex;
+    width:50vw;
+} */
 
 .aboutbtn {
     display: block;
@@ -67,7 +67,6 @@ body{
     font-size: 18px;
     color: #333;
     border-radius: 4px;
-    
     transition: background-image 150ms ease;
 }
 

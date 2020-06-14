@@ -371,7 +371,7 @@ object-fit: cover;
 
 /* 책 옆 글자 */
 #about .about-descr .p-heading {
-font-family: 'Playfair Display', serif;
+/* font-family: 'Playfair Display', serif; */
 /*
 font-size: 3rem;
 padding-top: 100px;
