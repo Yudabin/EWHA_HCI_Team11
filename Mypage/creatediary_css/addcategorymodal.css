@@ -41,7 +41,8 @@
 #addcategory_textfield{
     float: left;
     border: none;
-    margin: 3%;
+    margin:auto;
+    margin-top: 10%;
     width: 50%;
     height: 60%;
     border-bottom: #7A63FF solid 2px;

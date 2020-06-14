@@ -155,60 +155,59 @@
                     <form autocomplete="off">
                         <input id="title" type="text" placeholder="Title">
                     </form>
-                    <div class="custom-select" id="custom-select" style="width:200px;">
-        
-                        <select id="selectcategory">
-                            <option>choose category:</option>
-                            <option>DAILY DIARY</option>
-                            <option>WORKOUT</option>
-                            <option>STUDY PLANS</option>
-                            <option>TRAVEL</option>
-                        </select>
-        
-        
-                    </div>
-        
+
+                    <select class="selectpicker" id="category">
+                        <option class='category'>choose category:</option>
+                        <option class='category'>DAILY DIARY</option>
+                        <option class='category'>WORKOUT</option>
+                        <option class='category'>STUDY PLANS</option>
+                        <option class='category'>TRAVEL</option>
+                    </select>
+
+
                     <button id="addcategory">+</button>
                     <input id="calendar" type="date">
                     <button id="save">save</button>
                     <button id="export">export</button>
-        
+
                 </div>
-        
-                <div id="canvas">
-                    <div id="export_modal">
-                        <div id="export_modal_content">
-                            <span id="export_modal_close">&times;</span>
-        
-                            <button id="export_png_button">
-                                <a id="export_png">Download as PNG</a>
-                            </button>
-        
-                            <button id="export_pdf_button">
-                                <a id="export_pdf">Download as PDF</a>
-                            </button>
+                <div id="canvas_container">
+                    <div id="canvas">
+                        <div id="export_modal">
+                            <div id="export_modal_content">
+                                <span id="export_modal_close">&times;</span>
+
+                                <button id="export_png_button">
+                                    <a id="export_png">Download as PNG</a>
+                                </button>
+
+                                <button id="export_pdf_button">
+                                    <a id="export_pdf">Download as PDF</a>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div id="addcategory_modal">
+                            <div id="addcategory_content">
+                                <form autocomplete="off">
+                                    <input id="addcategory_textfield" type="text" placeholder="type category name">
+                                </form>
+                                <button id="addcategory_button">Done</button>
+                                <span id="addcategory_modal_close">&times;</span>
+
+
+                            </div>
                         </div>
                     </div>
-        
-                    <div id="addcategory_modal">
-                        <div id="addcategory_content">
-        
-                            <input id="addcategory_textfield" type="text" placeholder="type category name">
-                            <button id="addcategory_button">Done</button>
-                            <span id="addcategory_modal_close">&times;</span>
-        
-        
-                        </div>
-                    </div>
                 </div>
-        
+
             </div>
         </div>
 
 
         <script src="https://awwapp.com/static/widget/js/aww.min.js"></script>
         <script type="text/javascript">
-    
+
             window.onerror = function (msg, url, linenumber) {
                 //alert('Error message: ' + msg + '\nURL: ' + url + '\nLine Number: ' + linenumber);
                 return true;
@@ -216,7 +215,7 @@
             document.addEventListener("DOMContentLoaded", function (event) {
                 categorydropdown()
             });
-    
+
             var aww = new AwwBoard('#canvas', {
                 apiKey: 'f108f00a-3a70-4014-b852-82680916c6aa',
                 sizes: [3, 5, 8, 13, 20],
@@ -230,8 +229,8 @@
                 defaultTool: 'pencil',
                 enableZoom: false
             })
-    
-    
+
+
             document.getElementById("save").addEventListener("click", function () {
                 this.innerText = "saving.."
                 this.style.color = '#74E0EF'
@@ -249,31 +248,22 @@
             document.getElementById("export").addEventListener("click", function () {
                 document.getElementById("export_modal").style.display = "block"
             })
-    
+
             document.getElementById("addcategory_modal_close").addEventListener("click", function () {
                 document.getElementById("addcategory_modal").style.display = "none"
             })
             document.getElementById("addcategory").addEventListener("click", function () {
                 document.getElementById("addcategory_modal").style.display = "block"
             })
-    
+
             document.getElementById("addcategory_button").addEventListener("click", function () {
-                //alert(document.getElementById("custom-select").innerHTML)
-                var selectcategory_html = document.getElementById("selectcategory").innerHTML;
                 var categoryname = document.getElementById("addcategory_textfield").value;
-    
-                var a = document.createElement("select")
-                a.setAttribute("id", "selectcategory")
-                a.innerHTML = "" + selectcategory_html + "    <option>" + categoryname + "</option>\n"
-    
-                document.getElementById("custom-select").innerHTML = a.outerHTML;
-                //alert(document.getElementById("custom-select").innerHTML)
-                categorydropdown()
+                document.getElementById("category").innerHTML += "    <option>" + categoryname + "</option>\n"
                 document.getElementById("addcategory_modal").style.display = "none"
-    
+
             })
-    
-    
+
+
             window.onclick = function (event) {
                 var modal = document.getElementById("export_modal")
                 var modal2 = document.getElementById("addcategory_modal")
@@ -284,9 +274,9 @@
                     modal2.style.display = "none";
                 }
             }
-    
+
             function categorydropdown(drop = true) {
-    
+
                 if (drop == false) {
                     return
                 }
@@ -345,7 +335,7 @@
                         this.classList.toggle("select-arrow-active");
                     });
                 }
-    
+
                 function closeAllSelect(elmnt) {
                     /*a function that will close all select boxes in the document,
                     except the current select box:*/
@@ -367,17 +357,17 @@
                         }
                     }
                 }
-    
+
                 ///*if the user clicks anywhere outside the select box,
                 //then close all select boxes:
                 document.addEventListener("click", closeAllSelect);
-    
-    
+
+
             }
-    
-    
-    
-    
+
+
+
+
         </script>
 
         <script>
