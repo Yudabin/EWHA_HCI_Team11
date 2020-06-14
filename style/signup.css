@@ -27,7 +27,7 @@ body{
     grid-gap: 7rem;
     padding: 0 2rem;
 }
-img{
+.img img{
     /*justify-content: flex-end;
     align-items: center; */
     /* background: url("../img/logo1.png") repeat scroll center center/cover; */
@@ -35,7 +35,7 @@ img{
     height: 40vh;
     width: 30vw;
     margin: 150px 5px 0 50px;
-    display: flex;
+    display: flex;   
 }
 .img h4{
     position:sticky;
@@ -52,6 +52,8 @@ img{
     display: flex;
     width:50vw;
 } */
+
+
 
 .aboutbtn {
     display: block;
@@ -83,9 +85,10 @@ form{
     box-shadow: 3px 3px 3px 3px #7a63ef;
     padding: 50px 50px;
 }
-.female{
+/* .female{
     width:100px;
-}
+} */
+
 form h2{
     font-size: 2.9rem;
     text-transform: uppercase;
