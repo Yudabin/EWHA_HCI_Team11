@@ -16,7 +16,7 @@
 
 
     <link href="../Mypage/mypage_css/style.css" rel="stylesheet" type="text/css">
-
+    <link href="../style/analysis.css" rel="stylesheet" type="text/css">
     <link href="../Mypage/mypage_css/sidebar.css" rel="stylesheet" type="text/css">
     <link href="../Mypage/mypage_css/category.css" rel="stylesheet" type="text/css">
     <link href="../Mypage/mypage_css/diarylist.css" rel="stylesheet" type="text/css">
@@ -25,51 +25,21 @@
 <!-- js, css  END-->
 
 <body>
-    <nav class="navbar navbar-expand-lg  navbar-custom">
-        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
-            aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <a class="navbar-brand" href="#">
-
-            <span class="menu-collapsed">
-                <img id="logo2" src="../img/logo_gray.png" alt="">
-            </span>
-        </a>
-        <div class="collapse navbar-collapse" id="navbarNavDropdown">
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item active">
-                    <button id="logoutbtn" type="button">LOGOUT</button>
-                    <!--               /<a class="nav-link" href="#top">LOGOUT<span class="sr-only">(current)</span></a>-->
-
-                </li>
-
-                <!-- This menu is hidden in bigger devices with d-sm-none.
-                                    The sidebar isn't proper for smaller screens imo, so this dropdown menu can keep all the useful sidebar itens exclusively for smaller screens  -->
-                <li class="nav-item dropdown d-sm-block d-md-none">
-                    <a class="nav-link dropdown-toggle" href="#" id="smallerscreenmenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Menu </a>
-                    <div class="dropdown-menu" aria-labelledby="smallerscreenmenu">
-                        <a class="dropdown-item" href="#top">hjsahgjsa</a>
-                        <a class="dropdown-item" href="#top">Profile</a>
-                        <a class="dropdown-item" href="#top">Tasks</a>
-                    </div>
-                </li>
-                <!-- Smaller devices menu END -->
-            </ul>
-        </div>
-    </nav>
-    <!-- NavBar END -->
-
-
-    <!-- Bootstrap row -->
-    <div class="row" id="body-row">
+<!-- Bootstrap row -->
+ <div class="row" id="body-row">
         <!-- Sidebar -->
         <div id="sidebar-container" class="sidebar-expanded d-none d-md-block">
             <!-- d-* hiddens the Sidebar in smaller devices. Its itens can be kept on the Navbar 'Menu' -->
             <!-- Bootstrap List Group -->
+            <!-- <span class="fas fa-leaf fa-x" style="color:white"></span> -->
+            <span class="menu-collapsed">
+                <a href="home.html">
+                    <img id="logo3" src="../img/logo_gray.png" alt="">
+                </a>
+            </span>
             <ul class="list-group">
                 <!-- Separator with title -->
+                <!-- <img id="logo" src="../img/logo_black.png" alt=""> -->
                 <li class="list-group-item sidebar-separator-title text-muted d-flex align-items-center menu-collapsed">
                     <small>MAIN MENU</small>
                 </li>
@@ -77,9 +47,8 @@
 
 
                 <!-- Menu 1 -->
-                <a href="mypage_tab.html" class="bg-dark list-group-item list-group-item-action">
+                <a href="../Mypage/mypage_tab.html" class="bg-dark list-group-item list-group-item-action">
                     <div class="d-flex w-100 justify-content-start align-items-center">
-
                         <span class="fa fa-user fa-fw mr-3"></span>
                         <span class="menu-collapsed">My Page</span>
 
@@ -87,7 +56,7 @@
                 </a>
 
                 <!-- Menu 2-->
-                <a href="creatediary.html" class="bg-dark list-group-item list-group-item-action">
+                <a href="../Mypage/creatediary.html" class="bg-dark list-group-item list-group-item-action">
                     <div class="d-flex w-100 justify-content-start align-items-center">
                         <span class="fa fa-tasks fa-fw mr-3"></span>
                         <span class="menu-collapsed">Create Diary</span>
@@ -101,9 +70,8 @@
                 </li>
                 <!-- /END Separator -->
                 <!-- Menu 3-->
-                <a href="#" class="bg-dark list-group-item list-group-item-action">
+                <a href="../Mypage/analysis.html" class="bg-dark list-group-item list-group-item-action">
                     <div class="d-flex w-100 justify-content-start align-items-center">
-
                         <span class="fa fa-dashboard fa-fw mr-3"></span>
                         <span class="menu-collapsed">Analysis</span>
                     </div>
@@ -113,28 +81,33 @@
                 <li class="list-group-item sidebar-separator menu-collapsed"></li>
                 <!-- /END Separator -->
                 <a href="../src/help.html" class="bg-dark list-group-item list-group-item-action">
-                    <div class="d-flex w-100 justify-content-start align-items-center">
-                        <span class="fa fa-question fa-fw mr-3"></span>
-                        <span class="menu-collapsed">Help</span>
-                    </div>
-                </a>
-                <a href="#top" data-toggle="sidebar-colapse" class="bg-dark list-group-item list-group-item-action d-flex align-items-center">
-                    <div class="d-flex w-100 justify-content-start align-items-center">
-                        <span id="collapse-icon" class="fa fa-2x mr-3"></span>
-                        <span id="collapse-text" class="menu-collapsed">Collapse</span>
-                    </div>
-                </a>
-            </ul>
-            <!-- List Group END-->
-        </div>
+                 <div class="d-flex w-100 justify-content-start align-items-center">
+                     <span class="fa fa-question fa-fw mr-3"></span>
+                     <span class="menu-collapsed">Help</span>
+                 </div>
+             </a>
+            <!-- Separator without title -->
+            <li class="list-group-item sidebar-separator menu-collapsed"></li>
+            <!-- /END Separator -->
+           
+            <li class="list-group-item sidebar-separator menu-collapsed"></li>
+                       <!-- /END Separator -->
+                       <a href="../src/home.html" class="bg-dark list-group-item list-group-item-action">
+                           <div class="d-flex w-100 justify-content-start align-items-center">
+                               <span class="fa fa-sign-out fa-fw mr-3"></span>
+                               <span class="menu-collapsed">Logout</span>
+                           </div>
+                       </a>
+            <a href="#top" data-toggle="sidebar-colapse" class="bg-dark list-group-item list-group-item-action d-flex align-items-center">
+                <div class="d-flex w-100 justify-content-start align-items-center">
+                    <span id="collapse-icon" class="fa fa-2x mr-3"></span>
+                    <span id="collapse-text" class="menu-collapsed">Collapse</span>
+                </div>
+            </a>
+        </ul>
+        <!-- List Group END-->
+    </div>
         <!-- sidebar-container END -->
-
-
-
-
-
-
-
         <!-- MAIN -->
         <div id="mypage" class="col-5">
 
@@ -204,12 +177,71 @@
 
 
 
+            </div>
 
+        </div>
+        <!-- /container -->
+
+        <div class='col pl-0 pr-2 pt-4'>
+            <div class="card ">
+                <div class="card-header ">
+                    <h5>CHART</h5>
+                </div>
+                <div class="card-body w-30 h-50">
+                    <p>Chart the frequency of words you enter in your diary.
+                        <br> Click on the buttons inside the tabbed menu:</p>
+
+                    <div class="tab">
+                        <button class="tablinks" onclick="openCity(event, 'Daily')">Daily</button>
+                        <button class="tablinks" onclick="openCity(event, 'Workout')">Workout</button>
+                        <button class="tablinks" onclick="openCity(event, 'Study')">Study</button>
+                        <button class="tablinks" onclick="openCity(event, 'Travel')">Travel</button>
+                    </div>
+                    <div id="Daily" class="tabcontent">
+                        <!-- <h5>Daily Diary</h5> -->
+                        <img id="chart" src="../text_analysis/results/My birthday party.png" alt="">
+                        <img id="chart" src="../text_analysis/results/HCI team meeting.png" alt="">
+                        <img id="chart" src="../text_analysis/results/Daily blog#01.png" alt="">
+                        <!-- <p>London is the capital city of England.</p> -->
+                    </div>
+                    <div id="Workout" class="tabcontent">
+                        <!-- <h3>WORKOUT</h3> -->
+                        <img id="chart" src="../text_analysis/results/Workout routine #02.png" alt="">
+                        <img id="chart" src="../text_analysis/results/Han river jogging.png" alt="">
+                        <img id="chart" src="../text_analysis/results/Body profile D-5.png" alt="">
+                        <!-- <p>Paris is the capital of France.</p> -->
+                    </div>
+                    <div id="Study" class="tabcontent">
+                        <!-- <h3>Study Plan</h3> -->
+                        <img id="chart" src="../text_analysis/results/Final term D-10.png" alt="">
+                        <img id="chart" src="../text_analysis/results/HCI Final presentation.png" alt="">
+                        <!-- <p>London is the capital city of England.</p> -->
+                    </div>
+                    <div id="Travel" class="tabcontent">
+                        <!-- <h3>TRAVEL</h3> -->
+                        <img id="chart" src="../text_analysis/results/LA Tour.png" alt="">
+                        <img id="chart" src="../text_analysis/results/Trip to China.png" alt="">
+                        <img id="chart" src="../text_analysis/results/Trip to Seoul.png" alt="">
+                        <!-- <p>London is the capital city of England.</p> -->
+                    </div>
+
+                </div>
 
             </div>
-            <!-- /container -->
         </div>
-        <!-- /main-inner -->
+
+
+
+
+        <!-- /widget-content -->
+    </div>
+    <!-- /widget -->
+
+    <!-- /span6 -->
+    </div>
+    <!-- /row -->
+    </div>
+    <!-- /main-inner -->
     </div>
 
 
@@ -662,6 +694,23 @@
         });
     </script>
     <!-- /Calendar -->
+
+
+    <script>
+        function openCity(evt, cityName) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tablinks");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+            document.getElementById(cityName).style.display = "block";
+            evt.currentTarget.className += " active";
+        }
+    </script>
 </body>
 
 </html>
