@@ -53,7 +53,7 @@ video{
 .column-66-two{
   float: left;
   width: 30vw;
-  padding: 40px 40px 20px 60px;
+  padding: 40px 0 20px 60px;
 }
 
 .column-33-two{
@@ -76,7 +76,7 @@ video{
 }
 
 .large-font {
-  font-size: 48px;
+  font-size: 30px;
 }
   
 .xlarge-font {

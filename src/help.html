@@ -23,28 +23,13 @@
     <link rel="stylesheet" type="text/css" href="http://cdn.datatables.net/plug-ins/3cfcc339e89/integration/bootstrap/3/dataTables.bootstrap.css">
 
     <link href="../Mypage/mypage_css/sidebar.css" rel="stylesheet" type="text/css">
-    <link href="../Mypage/mypage_css/category.css" rel="stylesheet" type="text/css">
-    <link href="../Mypage/mypage_css/diarylist.css" rel="stylesheet" type="text/css">
+    <!-- <link href="../Mypage/mypage_css/category.css" rel="stylesheet" type="text/css">
+    <link href="../Mypage/mypage_css/diarylist.css" rel="stylesheet" type="text/css"> -->
     <link href="../style/help.css" rel="stylesheet">
 </head>
 <!-- js, css  END-->
 
 <body>
-
-    <!-- <nav class="navbar navbar-expand-lg  navbar-custom">
-        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
-            data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
-            aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <a class="navbar-brand" href="#">
-            
-            <span class="menu-collapsed">
-                <img id="logo" src="../img/logo_gray.png" alt="">
-            </span>
-        </a>
-        
-    </nav> -->
     <!-- Bootstrap row -->
     <div class="row" id="body-row">
         <!-- Sidebar -->
@@ -123,8 +108,10 @@
                 </li>
                 <a href="home.html" data-toggle="sidebar-colapse" class="bg-dark list-group-item list-group-item-action d-flex align-items-center">
                     <div class="d-flex w-100 justify-content-start align-items-center">
-                        <span id="collapse-icon" class="fa fa-2x mr-3"><i class="fas fa-sign-out-alt fa-s"></i></span>
-                        <span id="collapse-text" class="menu-collapsed">LOGOUT</span>
+                        <span id="collapse-icon" class="fa fa-2x mr-3">
+                            <i class="fas fa-sign-out-alt fa-s"></i>
+                        </span>
+                        <span id="collapse-text" class="menu-collapsed" style="color:#74e0ef;">LOGOUT</span>
                     </div>
                 </a>
             </ul>
@@ -133,56 +120,73 @@
         <!-- sidebar-container END -->
 
 
-
         <!-- MAIN -->
-
-
-        <!-- <div class="row pt-4 pb-2 pl-4"> -->
-
-        <!-- The App Section -->
-        <div class="wrapper">
-            <div class="container">
-                <div class="row">
-                    <div class="column-66-one">
-                        <h1 class="xlarge-font">
-                            <b>"Home"</b>
-                        </h1>
-                        <h1 class="large-font" style="color:#7a63ef;">
-                            <b>Sign up & Sign in</b>
-                        </h1>
-                        <p>
-                            <!-- <span style="font-size:36px">Take photos like a pro.</span> -->
-                            <br>- Click the 'aboutus' button under the logo on the home screen to view the introduction of the
-                            homepage.
-                            <br>- Enter your email, name, and password to sign up.
-                            <br>- Log in to the homepage with your registered email and password.</p>
-                        <!-- <button class="button">Download Application</button> -->
-                    </div>
-                    <div class="column-33-one">
-                        <video controls>
-                            <source src="../img/login.mp4" type="video/mp4">
-                        </video>
-                        <!-- <img src="../img/diary.png" width="335" height="471"> -->
-                    </div>
-                </div>
-            </div>
-
-            <!-- Clarity Section -->
-            <div id="c2">
-                <div id="c2" class="container">
+        <div id="mypage" class="col">
+            <div id="category" class="card">
+                <div class="container">
                     <div class="row">
-                        <div class="column-33-two">
+                        <div class="column-66-one">
+                            <h1 class="xlarge-font">
+                                <b>"Home"</b>
+                            </h1>
+                            <h1 class="large-font" style="color:#7a63ef;">
+                                <b>Sign up & Sign in</b>
+                            </h1>
+                            <p>
+                                <!-- <span style="font-size:36px">Take photos like a pro.</span> -->
+                                <br>- Click the 'aboutus' button under the logo on the home screen to view the introduction of
+                                the homepage.
+                                <br>- Enter your email, name, and password to sign up.
+                                <br>- Log in to the homepage with your registered email and password.</p>
+                            <!-- <button class="button">Download Application</button> -->
+                        </div>
+                        <div class="column-33-one">
                             <video controls>
                                 <source src="../img/login.mp4" type="video/mp4">
                             </video>
                             <!-- <img src="../img/diary.png" width="335" height="471"> -->
                         </div>
-                        <div class="column-66-two">
+                    </div>
+                </div>
+
+                <!-- Clarity Section -->
+                <div id="c2">
+                    <div id="c2" class="container">
+                        <div class="row">
+                            <div class="column-33-two">
+                                <video controls>
+                                    <source src="../img/login.mp4" type="video/mp4">
+                                </video>
+                                <!-- <img src="../img/diary.png" width="335" height="471"> -->
+                            </div>
+                            <div class="column-66-two">
+                                <h1 class="xlarge-font">
+                                    <b>"My Page"</b>
+                                </h1>
+                                <h1 class="large-font" style="color:#7a63ef;">
+                                    <b>CATEGORIES & DIARY LIST</b>
+                                </h1>
+                                <p>
+                                    <span style="font-size:36px">Take photos like a pro.</span>
+                                    <br>You should buy this app because lorem ipsum consectetur adipiscing elit, sed do eiusmod
+                                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                                    exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                                <!-- <button class="button">Download Application</button> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- The App Section -->
+                <div class="container">
+                    <div class="row">
+                        <div class="column-66-three">
                             <h1 class="xlarge-font">
-                                <b>"My Page"</b>
+                                <b>"Create Diary"</b>
                             </h1>
                             <h1 class="large-font" style="color:#7a63ef;">
-                                <b>사용법</b>
+                                <b>Write & Design</b>
                             </h1>
                             <p>
                                 <span style="font-size:36px">Take photos like a pro.</span>
@@ -191,42 +195,22 @@
                                 ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
                             <!-- <button class="button">Download Application</button> -->
                         </div>
+                        <div class="column-33-three">
+                            <video controls>
+                                <source src="../img/login.mp4" type="video/mp4">
+                            </video>
+                            <!-- <img src="../img/diary.png" width="335" height="471"> -->
+                        </div>
                     </div>
                 </div>
+
             </div>
-
-
-            <!-- The App Section -->
-            <div class="container">
-                <div class="row">
-                    <div class="column-66-three">
-                        <h1 class="xlarge-font">
-                            <b>"Create Diary"</b>
-                        </h1>
-                        <h1 class="large-font" style="color:#7a63ef;">
-                            <b>Write & Design</b>
-                        </h1>
-                        <p>
-                            <span style="font-size:36px">Take photos like a pro.</span>
-                            <br>You should buy this app because lorem ipsum consectetur adipiscing elit, sed do eiusmod tempor
-                            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                            ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                        <!-- <button class="button">Download Application</button> -->
-                    </div>
-                    <div class="column-33-three">
-                        <video controls>
-                            <source src="../img/login.mp4" type="video/mp4">
-                        </video>
-                        <!-- <img src="../img/diary.png" width="335" height="471"> -->
-                    </div>
-                </div>
-            </div>
-
         </div>
-
     </div>
 
-    </div>
+
+    <!-- row p-4 END -->
+
 
     <script>
         // When the user scrolls the page, execute myFunction
@@ -271,9 +255,9 @@
                 });
             });
         }());
-                                                            // End Show and Hide Triggers
+                            // End Show and Hide Triggers
 
-                                                            // END This section makes the search work.
+                            // END This section makes the search work.
     </script>
     <script>// Utility function
         function Util() { };
@@ -570,44 +554,6 @@
         });
 
 
-
-        function pic1() {
-            document.getElementById("first").src = "../Mypage/img/diary2.png";
-        }
-        function pic2() {
-            document.getElementById("first").src = "../Mypage/img/diary1.png";
-        }
-        function pic3() {
-            document.getElementById("first").src = "../Mypage/img/diary4.png";
-        }
-        function pic4() {
-            document.getElementById("first").src = "../Mypage/img/diary3.png";
-        }
-        function pic5() {
-            document.getElementById("first").src = "../Mypage/img/diary5.png";
-        }
-        function pic6() {
-            document.getElementById("first").src = "../Mypage/img/diary6.png";
-        }
-        function pic7() {
-            document.getElementById("first").src = "../Mypage/img/diary7.png";
-        }
-        function pic8() {
-            document.getElementById("first").src = "../Mypage/img/diary8.png";
-        }
-        function pic9() {
-            document.getElementById("first").src = "../Mypage/img/diary9.png";
-        }
-        function pic10() {
-            document.getElementById("first").src = "../Mypage/img/diary10.png";
-        }
-        function pic11() {
-            document.getElementById("first").src = "../Mypage/img/diary11.png";
-        }
-
-
-
-
         $(document).ready(function () {
             $('.toast').toast('show');
         });
@@ -627,27 +573,6 @@
                 });
             });
         });
-    </script>
-    <script>
-
-        $(function () {
-            $("#datepicker").datepicker({
-                dateFormat: "dd-mm-yy"
-                , duration: "fast",
-                onSelect: function (dateText, inst) {
-                    var dateAsString = dateText; //the first parameter of this function
-                    var time = $(this).datepicker({ dateFormat: 'dd,MM,yyyy' }).val(); //the getDate method
-                    time = time.split('-');
-                    alert(time);
-                }
-
-
-            });
-
-
-        });
-
-
     </script>
 
 
