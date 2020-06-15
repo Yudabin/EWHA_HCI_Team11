@@ -69,6 +69,7 @@ body{
     font-size: 18px;
     color: #333;
     border-radius: 4px;
+    margin: 0 0 0 200px;
     transition: background-image 150ms ease;
 }
 
