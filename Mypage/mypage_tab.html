@@ -19,47 +19,23 @@
 <!-- js, css  END-->
 
 <body>
-<nav class="navbar navbar-expand-lg  navbar-custom">
-    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
-        aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-    <a class="navbar-brand" href="#">
-        <!-- <img id="logo" src="https://raw.githubusercontent.com/Yudabin/EWHA_HCI_Team11/master/img/logo1.png" width="70" height="50"
-            alt=""> -->
-            <span class="menu-collapsed"><img id="logo" src="../img/logo_gray.png" alt=""></span>
-    </a>
-    <div class="collapse navbar-collapse" id="navbarNavDropdown">
-        <ul class="navbar-nav ml-auto">
-            <li class="nav-item active">
-                <button id="logoutbtn" type="button">LOGOUT</button>
-                <!--               /<a class="nav-link" href="#top">LOGOUT<span class="sr-only">(current)</span></a>-->
 
-            </li>
-
-            <!-- This menu is hidden in bigger devices with d-sm-none.
-                                        The sidebar isn't proper for smaller screens imo, so this dropdown menu can keep all the useful sidebar itens exclusively for smaller screens  -->
-            <li class="nav-item dropdown d-sm-block d-md-none">
-                <a class="nav-link dropdown-toggle" href="#" id="smallerscreenmenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Menu </a>
-                <div class="dropdown-menu" aria-labelledby="smallerscreenmenu">
-                    <a class="dropdown-item" href="#top">hjsahgjsa</a>
-                    <a class="dropdown-item" href="#top">Profile</a>
-                    <a class="dropdown-item" href="#top">Tasks</a>
-                </div>
-            </li>
-            <!-- Smaller devices menu END -->
-        </ul>
-    </div>
-</nav>
 <!-- NavBar END -->
 
 
 <!-- Bootstrap row -->
 <div class="row" id="body-row">
-    <!-- Sidebar -->
-    <div id="sidebar-container" class="sidebar-expanded d-none d-md-block">
-        <!-- d-* hiddens the Sidebar in smaller devices. Its itens can be kept on the Navbar 'Menu' -->
+<!-- Sidebar -->
+<div id="sidebar-container" class="sidebar-expanded d-none d-md-block">
+    <!-- d-* hiddens the Sidebar in smaller devices. Its itens can be kept on the Navbar 'Menu' -->
+    <!-- Bootstrap List Group -->
+    <!-- <span class="fas fa-leaf fa-x" style="color:white"></span> -->
+    <span class="menu-collapsed">
+        <a href="home.html">
+            <img id="logo3" src="../img/logo_gray.png" height='128' width="230" alt="">
+        </a>
+        
+    </span>
         <!-- Bootstrap List Group -->
         <ul class="list-group">
             <!-- Separator with title -->
@@ -79,48 +55,58 @@
                 </div>
             </a>
 
-            <!-- Menu 2-->
-            <a href="creatediary.html" class="bg-dark list-group-item list-group-item-action">
-                <div class="d-flex w-100 justify-content-start align-items-center">
-                    <span class="fa fa-tasks fa-fw mr-3"></span>
-                    <span class="menu-collapsed">Create Diary</span>
+             <!-- Menu 2-->
+                          <a href="../Mypage/creatediary.html" class="bg-dark list-group-item list-group-item-action">
+                              <div class="d-flex w-100 justify-content-start align-items-center">
+                                  <span class="fa fa-tasks fa-fw mr-3"></span>
+                                  <span class="menu-collapsed">Create Diary</span>
 
-                </div>
-            </a>
+                              </div>
+                          </a>
 
-            <!-- Separator with title -->
-            <li class="list-group-item sidebar-separator-title text-muted d-flex align-items-center menu-collapsed">
-                <small>OPTIONS</small>
-            </li>
-            <!-- /END Separator -->
-            <!-- Menu 3-->
-            <a href="analysis.html" class="bg-dark list-group-item list-group-item-action">
-                <div class="d-flex w-100 justify-content-start align-items-center">
+                          <!-- Separator with title -->
+                          <li class="list-group-item sidebar-separator-title text-muted d-flex align-items-center menu-collapsed">
+                              <small>OPTIONS</small>
+                          </li>
+                          <!-- /END Separator -->
+                          <!-- Menu 3-->
+                          <a href="../Mypage/analysis.html" class="bg-dark list-group-item list-group-item-action">
+                              <div class="d-flex w-100 justify-content-start align-items-center">
+                                  <span class="fa fa-dashboard fa-fw mr-3"></span>
+                                  <span class="menu-collapsed">Analysis</span>
+                              </div>
+                          </a>
 
-                    <span class="fa fa-dashboard fa-fw mr-3"></span>
-                    <span class="menu-collapsed">Analysis</span>
-                </div>
-            </a>
-
-            <!-- Separator without title -->
-            <li class="list-group-item sidebar-separator menu-collapsed"></li>
-            <!-- /END Separator -->
-            <a href="../src/help.html" class="bg-dark list-group-item list-group-item-action">
-                <div class="d-flex w-100 justify-content-start align-items-center">
-                    <span class="fa fa-question fa-fw mr-3"></span>
-                    <span class="menu-collapsed">Help</span>
-                </div>
-            </a>
-            <a href="#top" data-toggle="sidebar-colapse" class="bg-dark list-group-item list-group-item-action d-flex align-items-center">
-                <div class="d-flex w-100 justify-content-start align-items-center">
-                    <span id="collapse-icon" class="fa fa-2x mr-3"></span>
-                    <span id="collapse-text" class="menu-collapsed">Collapse</span>
-                </div>
-            </a>
-        </ul>
-        <!-- List Group END-->
-    </div>
-    <!-- sidebar-container END -->
+                          <!-- Separator without title -->
+                          <li class="list-group-item sidebar-separator menu-collapsed"></li>
+                          <!-- /END Separator -->
+                          <a href="../src/help.html" class="bg-dark list-group-item list-group-item-action">
+                           <div class="d-flex w-100 justify-content-start align-items-center">
+                               <span class="fa fa-question fa-fw mr-3"></span>
+                               <span class="menu-collapsed">Help</span>
+                           </div>
+                       </a>
+                      <!-- Separator without title -->
+                      <li class="list-group-item sidebar-separator menu-collapsed"></li>
+                      <!-- /END Separator -->
+                     
+                      <li class="list-group-item sidebar-separator menu-collapsed"></li>
+                                 <!-- /END Separator -->
+                                 <a href="../src/home.html" class="bg-dark list-group-item list-group-item-action">
+                                     <div class="d-flex w-100 justify-content-start align-items-center">
+                                         <span class="fa fa-sign-out fa-fw mr-3"></span>
+                                         <span class="menu-collapsed">Logout</span>
+                                     </div>
+                                 </a>
+                      <a href="#top" data-toggle="sidebar-colapse" class="bg-dark list-group-item list-group-item-action d-flex align-items-center">
+                          <div class="d-flex w-100 justify-content-start align-items-center">
+                              <span id="collapse-icon" class="fa fa-2x mr-3"></span>
+                              <span id="collapse-text" class="menu-collapsed">Collapse</span>
+                          </div>
+                      </a>
+                  </ul>
+                  <!-- List Group END-->
+              </div>
 
     <!-- MAIN -->
     <div id="mypage" class="col-4">
@@ -436,7 +422,7 @@
                             <div class='col pl-2'>
                                 <div class="text-muted h7 ">
                                     <i class="fa fa-clock-o"></i> 2 days ago</div>
-                                <a class="card-link" href="#first" onclick="pic1()">
+                                <a class="card-link" href="#first" onclick="pic8()">
                                     <h6> HCI Final presentation</h6>
                                 </a>
 
@@ -487,7 +473,7 @@
                             <div class='col pl-2'>
                                 <div class="text-muted h7 ">
                                     <i class="fa fa-clock-o"></i> 20 days ago</div>
-                                <a class="card-link" href="#first" onclick="pic1()">
+                                <a class="card-link" href="#first" onclick="pic2()">
                                     <h6> HCI team meeting</h6>
                                 </a>
 
@@ -532,7 +518,7 @@
                             <div class='col pl-2'>
                                 <div class="text-muted h7 ">
                                     <i class="fa fa-clock-o"></i> 4 months ago</div>
-                                <a class="card-link" href="#">
+                                <a class="card-link" href="#" onclick="pic9()">
                                     <h6>Trip to Seoul</h6>
                                 </a>
 
@@ -578,7 +564,7 @@
                             <div class='col pl-2'>
                                 <div class="text-muted h7 ">
                                     <i class="fa fa-clock-o"></i> 5 month ago</div>
-                                <a class="card-link" href="#">
+                                <a class="card-link" href="#"  onclick="pic4()">
                                     <h6>Workout routine #02</h6>
                                 </a>
 
@@ -627,7 +613,7 @@
                             <div class='col pl-2'>
                                 <div class="text-muted h7 ">
                                     <i class="fa fa-clock-o"></i> 5 months ago</div>
-                                <a class="card-link" href="#">
+                                <a class="card-link" href="#" onclick="pic1()">
                                     <h6>My birthday party</h6>
                                 </a>
 
@@ -723,7 +709,7 @@
                             <div class='col pl-2'>
                                 <div class="text-muted h7 ">
                                     <i class="fa fa-clock-o"></i> 7 month ago</div>
-                                <a class="card-link" href="#">
+                                <a class="card-link" href="#" onclick="pic6()">
                                     <h6> Han river jogging</h6>
                                 </a>
 
@@ -761,10 +747,10 @@
         <div class="card-body h-100">
 
            
-                <span id='pencil' class="fa fa-pencil"  type="button"  aria-hidden="true"></span>
+                <span id='pencil' class="fa fa-pencil p-2" style="font-size:20px; background-color:red" type="button"  aria-hidden="true">edit</span>
             
             <p>
-                <img id="first" src="../Mypage/img/diary2.png" class="img-fluid" alt="Responsive image"></img>
+                <img id="first" src="../Mypage/img/diary8.png" class="img-fluid" alt="Responsive image"></img>
 
         </div>
 
