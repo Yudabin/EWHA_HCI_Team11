@@ -13,6 +13,7 @@
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" type="text/css" href="http://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://awwapp.com/static/widget/js/aww.min.js"></script>
 <!-- Popper.JS -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
@@ -39,44 +40,6 @@
 <!-- js, css  END-->
 
 <body>
-    <nav class="navbar navbar-expand-lg  navbar-custom">
-        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
-            data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
-            aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <a class="navbar-brand" href="#">
-            <!-- <img id="logo" src="https://raw.githubusercontent.com/Yudabin/EWHA_HCI_Team11/master/img/logo1.png" width="70" height="50"
-            alt=""> -->
-            <span class="menu-collapsed">
-                <img id="logo" src="../img/logo_gray.png" alt="">
-            </span>
-        </a>
-        <div class="collapse navbar-collapse" id="navbarNavDropdown">
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item active">
-                    <button id="logoutbtn" type="button">LOGOUT</button>
-                    <!--               /<a class="nav-link" href="#top">LOGOUT<span class="sr-only">(current)</span></a>-->
-
-                </li>
-
-                <!-- This menu is hidden in bigger devices with d-sm-none.
-                                        The sidebar isn't proper for smaller screens imo, so this dropdown menu can keep all the useful sidebar itens exclusively for smaller screens  -->
-                <li class="nav-item dropdown d-sm-block d-md-none">
-                    <a class="nav-link dropdown-toggle" href="#" id="smallerscreenmenu" data-toggle="dropdown"
-                        aria-haspopup="true" aria-expanded="false">
-                        Menu </a>
-                    <div class="dropdown-menu" aria-labelledby="smallerscreenmenu">
-                        <a class="dropdown-item" href="#top">hjsahgjsa</a>
-                        <a class="dropdown-item" href="#top">Profile</a>
-                        <a class="dropdown-item" href="#top">Tasks</a>
-                    </div>
-                </li>
-                <!-- Smaller devices menu END -->
-            </ul>
-        </div>
-    </nav>
-    <!-- NavBar END -->
 
 
     <!-- Bootstrap row -->
@@ -155,35 +118,36 @@
                     <form autocomplete="off">
                         <input id="title" type="text" placeholder="Title">
                     </form>
+                    <div class='category'>
+                        <select class="selectpicker" id="category">
+                            <option class='category'>choose category:</option>
+                            <option class='category'>DAILY DIARY</option>
+                            <option class='category'>WORKOUT</option>
+                            <option class='category'>STUDY PLANS</option>
+                            <option class='category'>TRAVEL</option>
+                        </select>
 
-                    <select class="selectpicker" id="category">
-                        <option class='category'>choose category:</option>
-                        <option class='category'>DAILY DIARY</option>
-                        <option class='category'>WORKOUT</option>
-                        <option class='category'>STUDY PLANS</option>
-                        <option class='category'>TRAVEL</option>
-                    </select>
-
-
-                    <button id="addcategory">+</button>
+                        <button id="addcategory">+</button>
+                    </div>
                     <input id="calendar" type="date">
                     <button id="save">save</button>
                     <button id="export">export</button>
 
                 </div>
                 <div id="canvas_container">
+
+
+
                     <div id="canvas">
+                        <div id="doundo">
+                            <button id=undo>do</button>
+                            <button id=do>undo</button>
+                        </div>
                         <div id="export_modal">
                             <div id="export_modal_content">
                                 <span id="export_modal_close">&times;</span>
-
-                                <button id="export_png_button">
-                                    <a id="export_png">Download as PNG</a>
-                                </button>
-
-                                <button id="export_pdf_button">
-                                    <a id="export_pdf">Download as PDF</a>
-                                </button>
+                                <button id="export_png_button">Download as PNG</button>
+                                <button id="export_pdf_button">Download as PDF</button>
                             </div>
                         </div>
 
@@ -204,12 +168,17 @@
             </div>
         </div>
 
+        <script type="text/javascript">
+            $(document).ready(function () {
+                $('.SlectBox').SumoSelect();
+            });
+        </script>
 
-        <script src="https://awwapp.com/static/widget/js/aww.min.js"></script>
+
         <script type="text/javascript">
 
             window.onerror = function (msg, url, linenumber) {
-                //alert('Error message: ' + msg + '\nURL: ' + url + '\nLine Number: ' + linenumber);
+                //alertalert('Error message: ' + msg + '\nURL: ' + url + '\nLine Number: ' + linenumber);
                 return true;
             }
             document.addEventListener("DOMContentLoaded", function (event) {
@@ -249,6 +218,30 @@
                 document.getElementById("export_modal").style.display = "block"
             })
 
+            document.getElementById("export_png_button").addEventListener("click", function () {
+                this.innerText = "Downloading.."
+                this.style.color = '#74E0EF'
+                setTimeout(() => {
+                    this.innerText = "Donnload Complete"
+                }, 1000);
+                setTimeout(() => {
+                    this.innerText = "Download as PNG"
+                    this.style.color = "#ffffff"
+                }, 2000);
+            })
+
+            document.getElementById("export_pdf_button").addEventListener("click", function () {
+                this.innerText = "Downloading.."
+                this.style.color = '#74E0EF'
+                setTimeout(() => {
+                    this.innerText = "Donnload Complete"
+                }, 1000);
+                setTimeout(() => {
+                    this.innerText = "Download as PDF"
+                    this.style.color = "#ffffff"
+                }, 2000);
+            })
+
             document.getElementById("addcategory_modal_close").addEventListener("click", function () {
                 document.getElementById("addcategory_modal").style.display = "none"
             })
@@ -260,6 +253,7 @@
                 var categoryname = document.getElementById("addcategory_textfield").value;
                 document.getElementById("category").innerHTML += "    <option>" + categoryname + "</option>\n"
                 document.getElementById("addcategory_modal").style.display = "none"
+                document.getElementById("addcategory_textfield").value = ""
 
             })
 

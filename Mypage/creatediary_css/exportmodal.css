@@ -15,19 +15,22 @@
 
 /* Modal Content */
 #export_modal_content {
+    position: relative;
     background-color: #fefefe;
     margin: auto;
     padding: 20px;
     border: 1px solid #888;
     width: 30%;
-    height: 30%;
+    height: 25%;
 }
 
 /* The Close Button */
 #export_modal_close {
+    position: absolute;
+    top:0;right:0;
+    margin-right: 10px;
     color: #aaaaaa;
-    float: right;
-    font-size: 28px;
+    font-size: 30px;
     font-weight: bold;
 }
 
@@ -42,20 +45,21 @@
     float: left;
     border: none;
     color: white;
-    margin: 3%;
+    margin: 5%;
     padding :1%;
     width: 40%;
-    height: 60%;
+    height:50%;
     background-color: #7A63FF;
 }
 
 #export_pdf_button{
-    float: right;
+    float: left;
     border: none;
     color: white;
-    margin: 3%;
+    margin: 5%;
     padding :1%;
     width: 40%;
-    height: 60%;
+    height: 50%;
     background-color: #7A63FF;
 }
+
