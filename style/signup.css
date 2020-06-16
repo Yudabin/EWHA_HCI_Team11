@@ -27,21 +27,20 @@ body{
     grid-gap: 7rem;
     padding: 0 2rem;
 }
-.img{
-    /* display: flex;
-    justify-content: flex-end;
+.img img{
+    /*justify-content: flex-end;
     align-items: center; */
-    background: url("../img/logo1.png") repeat scroll center center/cover;
+    /* background: url("../img/logo1.png") repeat scroll center center/cover; */
     /* height: 50vh; */
-    height: 50vh;
-    width: 35vw;
-    margin: 150px 5px 30px 5px;
-    display: flex;
+    height: 40vh;
+    width: 30vw;
+    margin: 150px 5px 0 50px;
+    display: flex;   
 }
 .img h4{
     position:sticky;
     display: flex;
-    margin: 350px 0 30px 170px;
+    margin: 0 0 0 220px;
     font-size: 20px;
     color: #000;
 }
@@ -49,9 +48,12 @@ body{
     color: #333;
 } */
 
-.img img{
-    width:400px;
-}
+/* .img img{
+    display: flex;
+    width:50vw;
+} */
+
+
 
 .aboutbtn {
     display: block;
@@ -67,7 +69,7 @@ body{
     font-size: 18px;
     color: #333;
     border-radius: 4px;
-    
+    margin: 0 0 0 200px;
     transition: background-image 150ms ease;
 }
 
@@ -84,9 +86,10 @@ form{
     box-shadow: 3px 3px 3px 3px #7a63ef;
     padding: 50px 50px;
 }
-.female{
+/* .female{
     width:100px;
-}
+} */
+
 form h2{
     font-size: 2.9rem;
     text-transform: uppercase;
