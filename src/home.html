@@ -2,368 +2,477 @@
 <html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
-
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
     <title>Dear Diary</title>
-    <meta content="" name="descriptison">
-    <meta content="" name="keywords">
-
-    <!-- Favicons -->
-    <link href="../img/favicon.png" rel="icon">
-    <link href="../img/apple-touch-icon.png" rel="apple-touch-icon">
+    <!-- Favicon-->
+    <link rel="icon" type="image/x-icon" href="../img/leaf.ico" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
-
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Poppins:300,300i,400,400i,500,500i,600,600i,700,700i|Playfair+Display:400,400i,500,500i,600,600i,700,700i,900,900i"
-        rel="stylesheet">
-
-    <!-- Vendor CSS Files -->
-    <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link href="../vendor/hover/hover.min.css" rel="stylesheet">
-    <link href="../vendor/ionicons/css/ionicons.min.css" rel="stylesheet">
-    <link href="../vendor/venobox/venobox.css" rel="stylesheet">
-    <link href="../vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
-
-    <!-- Template Main CSS File -->
-    <link href="../style/home.css" rel="stylesheet">
-    <link href="../style/signup.css" rel="stylesheet">
-    <link href="../style/main.css" rel="stylesheet">
-
+    <!-- Font Awesome icons (free version)-->
+    <!-- <script src="https://use.fontawesome.com/releases/v5.13.0/js/all.js" crossorigin="anonymous"></script> -->
+    <!-- Google fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="../style/styles.css" rel="stylesheet" />
+    <link href="../style/index.css" rel="stylesheet" />
+    <link href="../style/main.css" rel="stylesheet" />
 </head>
 
-<body>
-    <!-- ======= Hero Section ======= -->
-    <div class="wapper">
-        <!-- <img class="wave" src="/img/HCI_logo.png"> -->
-        <div class="container">
-            <div class="img">
-                <img src="../img/logo1.png">
+<body id="page-top">
+
+    <!-- Masthead-->
+    <!-- <header class="masthead bg-primary text-white text-center"> -->
+    <div class="container d-flex align-items-center flex-column">
+        <div class="wapper">
+            <div class="container1">
+                <div class="img">
+                    <img src="../img/logo1.png">
                     <a href="#target1" class="scroll">
-                       <button class="aboutbtn">About us</button> 
+                        <button class="aboutbtn">About us</button>
                     </a>
-               
+
+                </div>
+                <!-- 회원가입 -->
+                <div class="signup-container">
+                    <form action="home.html" id="signup">
+                        <!-- <img class="female" src="/img/female.png"> -->
+                        <h2>Sign Up</h2>
+                        <!-- textbox -->
+                        <div class="input-div one">
+                            <div class="i">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div>
+                                <h5>Email</h5>
+                                <input class="input" type="email" id="email" autocomplete="off" required>
+                            </div>
+                        </div>
+                        <div class="input-div two">
+                            <div class="i">
+                                <i class="fas fa-user"></i>
+
+                            </div>
+                            <div>
+                                <h5>Username</h5>
+                                <input class="input" type="text" id="username" autocomplete="off" required>
+                            </div>
+                        </div>
+                        <div class="input-div">
+                            <div class="i">
+                                <i class="fas fa-lock"></i>
+                            </div>
+                            <div>
+                                <h5>Password</h5>
+                                <input class="input" type="password" id="pw" autocomplete="off" required>
+                            </div>
+                        </div>
+                        <div class="input-div">
+                            <div class="i">
+                                <i class="fas fa-lock"></i>
+                            </div>
+                            <div>
+                                <h5>Confirm Password</h5>
+                                <input class="input" type="password" id="cpw" autocomplete="off" required>
+                            </div>
+                        </div>
+                        <div class="button">
+                            <!-- <a href="#">Forgot Password?</a> -->
+                            <!-- <input type="submit" class="btn" value="Signup"> -->
+                            <input id="sbtn" type="submit" class="btn" name="signup-button" value="Sign Up" onclick="javascript:btn()" />
+
+                            <input type="button" class="btn" onclick="document.getElementById('id01').style.display='block'" value="Login">
+                            <!-- <button class="btn" onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button> -->
+                        </div>
+                    </form>
+                </div>
+
             </div>
-            <!-- 회원가입 -->
-            <div class="signup-container">
-                <form action="home.html">
-                    <!-- <img class="female" src="/img/female.png"> -->
-                    <h2>Sign Up</h2>
-                    <!-- textbox -->
-                    <div class="input-div one">
-                        <div class="i">
-                            <i class="fas fa-envelope"></i>
-                        </div>
-                        <div>
-                            <h5>Email</h5>
-                            <input class="input" type="email" id="email" autocomplete="off" required>
-                        </div>
+            <!-- 로그인 모달 -->
+            <div id="id01" class="modal">
+                <form class="modal-content animate" action="../Mypage/mypage_tab.html" id="login">
+                    <!-- 로그인버튼 눌렀을때 페이지 이동 -->
+                    <!-- action="/action_page.php" method="post" -->
+                    <div class="imgcontainer">
+                        <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+                        <img id="login" class="female" src="../img/login.png">
+                        <h2>Log In</h2>
                     </div>
-                    <div class="input-div two">
-                        <div class="i">
-                            <i class="fas fa-user"></i>
 
+                    <div class="modalcontainer">
+                        <div class="input-modal-div a">
+                            <div class="i">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div>
+                                <h5>E-mail</h5>
+                                <input class="input" type="email" id="email1" autocomplete="off" required>
+                            </div>
                         </div>
-                        <div>
-                            <h5>Username</h5>
-                            <input class="input" type="text" id="username" autocomplete="off" required>
+                        <div class="input-modal-div b">
+                            <div class="i">
+                                <i class="fas fa-lock"></i>
+                            </div>
+                            <div>
+                                <h5>Password</h5>
+                                <input class="input" type="password" id="pw1" autocomplete="off" required>
+                            </div>
                         </div>
-                    </div>
-                    <div class="input-div">
-                        <div class="i">
-                            <i class="fas fa-lock"></i>
-                        </div>
-                        <div>
-                            <h5>Password</h5>
-                            <input class="input" type="password" id="pw" autocomplete="off" required>
-                        </div>
-                    </div>
-                    <div class="input-div">
-                        <div class="i">
-                            <i class="fas fa-lock"></i>
-                        </div>
-                        <div>
-                            <h5>Confirm Password</h5>
-                            <input class="input" type="password" id="cpw" autocomplete="off" required>
-                        </div>
-                    </div>
-                    <div class="button">
-                        <!-- <a href="#">Forgot Password?</a> -->
-                        <!-- <input type="submit" class="btn" value="Signup"> -->
-                        <input id="sbtn" type="submit" class="btn" name="signup-button" value="Sign Up" onclick="javascript:btn()" />
-
-                        <input type="button" class="btn" onclick="document.getElementById('id01').style.display='block'" value="Login">
-                        <!-- <button class="btn" onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button> -->
+                        <input type="submit" class="modalbtn" name="login-button" value="Login" onclick="loginbtn()" />
+                        <!-- <button class="modalbtn" type="submit" name="login-button" onclick="javascript:loginbtn()">Login</button> -->
                     </div>
                 </form>
             </div>
-
-        </div>
-        <!-- 로그인 모달 -->
-        <div id="id01" class="modal">
-            <form class="modal-content animate" action="../Mypage/mypage_tab.html">
-                <!-- 로그인버튼 눌렀을때 페이지 이동 -->
-                <!-- action="/action_page.php" method="post" -->
-                <div class="imgcontainer">
-                    <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
-                    <img id="login" class="female" src="../img/login.png">
-                    <h2>Log In</h2>
-                </div>
-
-                <div class="modalcontainer">
-                    <div class="input-modal-div a">
-                        <div class="i">
-                            <i class="fas fa-envelope"></i>
-                        </div>
-                        <div>
-                            <h5>E-mail</h5>
-                            <input class="input" type="email" id="email1" autocomplete="off" required>
-                        </div>
-                    </div>
-                    <div class="input-modal-div b">
-                        <div class="i">
-                            <i class="fas fa-lock"></i>
-                        </div>
-                        <div>
-                            <h5>Password</h5>
-                            <input class="input" type="password" id="pw1" autocomplete="off" required>
-                        </div>
-                    </div>
-                    <input type="submit" class="modalbtn" name="login-button" value="Login" onclick="loginbtn()" />
-                    <!-- <button class="modalbtn" type="submit" name="login-button" onclick="javascript:loginbtn()">Login</button> -->
-                </div>
-            </form>
         </div>
     </div>
 
 
-    <!-- 소개화면 -->
-    <!-- <div id="target1">
-        <div id="hero" class="home">
+    <!-- About Section-->
+    <div id="target1">
+        <section class="page-section  text-white mb-0" id="about">
             <div class="container">
-                <div class="hero-content">
-                    <h1>Create
-                        <br>
-                        <span class="typed"></span>
-                    </h1>
-                    <p class="typed-items" data-typed-person="My Diary">design your day</p>
-
-                </div>
-                <div id="about">
-                    <div class="about-descr">
-                        <p class="p-heading">Personal Web Diary "Dear Diary" </p>
-                        <p class="separator">We came up with Web-based diary system ‘Dear Diary’ which provide ‘write/design’ service with various
-                            tools, ‘organize’ by certain category, ‘export’ as a pdf/png file.</p>
-
+                <!-- About Section Heading-->
+                <h2 class="page-section-heading text-center text-uppercase text-white">About</h2>
+                <!-- Icon Divider-->
+                <div class="divider-custom divider-light">
+                    <div class="divider-custom-line"></div>
+                    <div class="divider-custom-icon">
+                        <i class="fas fa-leaf"></i>
                     </div>
-
+                    <div class="divider-custom-line"></div>
                 </div>
-
+                <!-- About Section Content-->
+                <div class="row">
+                    <div class="col-lg-4 ml-auto">
+                        <p class="lead">"Dear Diary" is a web-based diary system that provides writing/design services with various tools
+                            without space constraints.
+                        </p>
+                    </div>
+                    <div class="col-lg-4 mr-auto">
+                        <p class="lead">Through this system, you can use the diary search function, organized list function, calendar and
+                            analysis function, and export function in pdf or png form.</p>
+                    </div>
+                </div>
+                <!-- About Section Button-->
+                <!-- <div class="text-center mt-4">
+                    <a class="btn btn-xl btn-outline-light" href="https://startbootstrap.com/themes/freelancer/">
+                        <i class="fas fa-download mr-2"></i>Free Download!</a>
+                </div> -->
             </div>
-        </div>
-    </div> -->
-    <!-- End Hero -->
+        </section>
+    </div>
 
-    <main id="main">
+    <!-- Portfolio Section-->
+    <section class="page-section portfolio" id="portfolio">
+        <div class="container">
 
-        <!-- ======= About Section ======= -->
-        <div id="target1">
-            <div id="about" class="paddsection">
-                <div class="container1">
-                    <div class="row justify-content-between">
-                        <div class="col-lg-4 ">
-                            <!-- <div class="div-img-bg">
-                                <div class="about-img">
-                                    <img src="/img/diary.png" class="img-responsive" alt="me">
-                                </div>
+            <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">main function</h2>
+
+            <div class="divider-custom">
+                <div class="divider-custom-line"></div>
+                <div class="divider-custom-icon">
+                    <i class="fas fa-leaf"></i>
+                </div>
+                <div class="divider-custom-line"></div>
+            </div>
+
+            <div class="row">
+
+                <div class="col-md-6 col-lg-4 mb-5">
+                    <div class="portfolio-item mx-auto">
+                        <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                            <!-- <div class="portfolio-item-caption-content text-center text-white">
+                                <i class="fas fa-plus fa-3x"></i>
                             </div> -->
                         </div>
-                        <div class="col-lg-7">
-                            <!-- <div class="about-descr">
-                                <p class="p-heading">im a ux /ui designer austin based who loves clean, simple & unique design. i also enjoy crafting
-                                    brand identities, icons, & ilustration work. </p>
-                                <p class="separator">To an English person, it will seem like simplified English, as a skeptical Cambridge friend of
-                                    mine told me what Occidental is. The European languages are members of the same family.English
-                                    person.
-                                </p>
-                            </div> -->
-                            <div class="about-descr">
-                                <p class="p-heading">Personal Web Diary "Dear Diary"</p>
-                                <p class="separator">We came up with Web-based diary system Dear Diary which provide write/design service
-                                    with various tools, organize by certain category, export as a pdf/png file.</p>
+                        <h4>Write & Design</h4>
+                        <img class="img-fluid" src="../img/write.png" alt="" />
 
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4 mb-5">
+                    <div class="portfolio-item mx-auto">
+                        <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                            <!-- <div class="portfolio-item-caption-content text-center text-white">
+                                <i class="fas fa-plus fa-3x"></i>
+                            </div> -->
+                        </div>
+                        <h4>Search</h4>
+                        <img class="img-fluid" src="../img/search.png" alt="" />
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4 mb-5">
+                    <div class="portfolio-item mx-auto">
+                        <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                            <!-- <div class="portfolio-item-caption-content text-center text-white">
+                                <i class="fas fa-plus fa-3x"></i>
+                            </div> -->
+                        </div>
+                        <h4>View</h4>
+                        <img class="img-fluid" src="../img/view.png" alt="" />
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4 mb-5 mb-lg-0">
+                    <div class="portfolio-item mx-auto">
+                        <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+
+                        </div>
+                        <h4>PDF/PNG</h4>
+                        <img class="img-fluid" src="../img/pdf.png" alt="" />
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4 mb-5 mb-md-0">
+                    <div class="portfolio-item mx-auto">
+                        <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+
+                        </div>
+                        <h4>Calendar</h4>
+                        <img class="img-fluid" src="../img/calendar1.png" alt="" />
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                    <div class="portfolio-item mx-auto">
+                        <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+
+                        </div>
+                        <h4>Analysis</h4>
+                        <img class="img-fluid" src="../img/analysis.png" alt="" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section-->
+    <section class="page-section" id="contact">
+        <div class="container">
+            <!-- Contact Section Heading-->
+            <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Contact Me</h2>
+            <!-- Icon Divider-->
+            <div class="divider-custom">
+                <div class="divider-custom-line"></div>
+                <div class="divider-custom-icon">
+                    <i class="fas fa-leaf"></i>
+                    <!-- <img id="leaf" src="../img/login.png"> -->
+                </div>
+                <div class="divider-custom-line"></div>
+            </div>
+
+            <!-- Contact Section Form-->
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <!-- To configure the contact form email address, go to mail/contact_me.php and update the email address in the PHP file on line 19.-->
+                    <form id="contactForm" name="sentMessage">
+
+                        <div class="container">
+                            <div class="row100">
+                                <div class="col">
+                                    <div class="inputBox">
+                                        <input id="name1" type="text" autocomplete="off" required>
+                                        <span class="text">Name</span>
+                                        <span class="line"></span>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="inputBox">
+                                        <input id="Email" type="text" autocomplete="off" required>
+                                        <span class="text">Email</span>
+                                        <span class="line"></span>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="inputBox">
+                                        <input id="phone1" type="tel" autocomplete="off" required>
+                                        <span class="text">Phone</span>
+                                        <span class="line"></span>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="inputBox textarea">
+                                        <textarea id="message1" required></textarea>
+                                        <span class="text">Message</span>
+                                        <span class="line"></span>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <input id="contactbtn" type="submit" class="btn" name="send" value="Send" onclick="javascript:cbtn()"/>
+                    
+                                </div>
                             </div>
                         </div>
-                    </div>
+                    </form>
                 </div>
             </div>
         </div>
-
-        <!-- End About Section -->
-
-        <!-- ======= Services Section ======= -->
-        <div id="services">
-            <div class="container1">
-
-                <div class="services-carousel owl-theme">
-
-                    <div class="services-block">
-
-                        <i class="fas fa-list"></i>
-                        <span>DIARY CATEGORY</span>
-                        <p class="separator">organize by certain category </p>
-
-                    </div>
-                    <div class="services-block">
-
-                        <i class="fas fa-sticky-note"></i>
-                        <span>MEMO</span>
-                        <p class="separator">writing and managing memos</p>
-
-                    </div>
-
-                    <div class="services-block">
-
-                        <i class="fas fa-file-pdf"></i>
-                        <span>PDF</span>
-                        <p class="separator">export as pdf file </p>
-
-                    </div>
-
-                    <div class="services-block">
-
-                        <i class="far fa-edit"></i>
-                        <span>DIARY TOOL</span>
-                        <p class="separator">writing/design service with various tools </p>
-
-                    </div>
-
-                    <div class="services-block">
-
-                        <i class="fas fa-calendar-alt"></i>
-                        <span>CALENDAR</span>
-                        <p class="separator">manage schedules via memos </p>
-
-                    </div>
-
-
-                </div>
-
-            </div>
-
-        </div>
-
         <div class="top">
             <!-- <button class="top" type="button" onclick="goTop()">맨 위로 ↑</button> -->
             <i onclick="goTop()" class="fas fa-arrow-circle-up fa-3x"></i>
         </div>
+    </section>
+    <!-- Footer-->
+
+    <!-- Copyright Section-->
+    <div class="copyright py-4 text-center text-white">
+        <div class="container">
+            <small>2020 EWHA HCI Team11</small>
+        </div>
+    </div>
+    <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes)-->
+    <div class="scroll-to-top d-lg-none position-fixed">
+        <a class="js-scroll-trigger d-block text-center text-white rounded" href="#page-top">
+            <i class="fa fa-chevron-up"></i>
+        </a>
+    </div>
+
+    <!-- Bootstrap core JS-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.bundle.min.js"></script>
+    <!-- Third party plugin JS-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+    <!-- Contact form JS-->
+    <!-- <script src="../assets/mail/jqBootstrapValidation.js"></script>
+    <script src="../assets/mail/contact_me.js"></script> -->
+    <!-- Core theme JS-->
+    <script src="../js/scripts.js"></script>
 
 
-        <script>
-            var email = document.getElementById("email");
-            var username = document.getElementById("username");
-            var pw = document.getElementById("pw");
-            var cpw = document.getElementById("cpw");
+    <script>
+        var email = document.getElementById("email");
+        var username = document.getElementById("username");
+        var pw = document.getElementById("pw");
+        var cpw = document.getElementById("cpw");
 
-            // $(sbtn).on('click', function() {
-            function btn() {
-                if ($(email).val() == "") {
-                    $(email).next('label').addClass('warning');
-                }
-                else if ($(username).val() == "") {
-                    $(username).next('label').addClass('warning');
-                }
-                else if ($(pw).val() == "") {
-                    $(pw).next('label').addClass('warning');
-                }
-                else if ($(cpw).val() == "") {
-                    $(cpw).next('label').addClass('warning');
-                }
-
-                else {
-                    // if($(email).val() !=null || $(username).val() != null || $(pw).val() != null || $(cpw).val() !=null){
-                    alert("Sign up complete!!");
-                }
+        // $(sbtn).on('click', function() {
+        function btn() {
+            if ($(email).val() == "") {
+                $(email).next('h5').addClass('warning');
             }
-        </script>
-
-        <script>
-            var email1 = document.getElementById("email1");
-            var pw1 = document.getElementById("pw1");
-
-            function loginbtn() {
-                if ($(email1).val() == "") {
-                    $(email1).next('label').addClass('warning');
-                }
-                else if ($(pw1).val() == "") {
-                    $(pw1).next('label').addClass('warning');
-                }
-
-                // if($(email1).val() !="" && $(pw1).val() !=""){
-                //         // location.replace("homescreen.html")
-                //         location.href = "homescreen.html";
-
-                // }
+            else if ($(username).val() == "") {
+                $(username).next('h5').addClass('warning');
             }
-        </script>
-        <!-- End Services Section -->
-
-        <!-- Vendor JS Files -->
-        <script src="../vendor/jquery/jquery.min.js"></script>
-        <script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-        <script src="../vendor/jquery.easing/jquery.easing.min.js"></script>
-        <script src="../vendor/php-email-form/validate.js"></script>
-        <script src="../vendor/typed/typed.js"></script>
-        <script src="../vendor/jquery-sticky/jquery.sticky.js"></script>
-        <script src="../vendor/isotope-layout/isotope.pkgd.min.js"></script>
-        <script src="../vendor/venobox/venobox.min.js"></script>
-        <script src="../vendor/owl.carousel/owl.carousel.min.js"></script>
-
-        <!-- Template Main JS File -->
-        <!-- 밑에 스크립트 적용하면 초록색 나옴 -->
-        <script src="../js/main.js"></script>
-        <script src="../js/signup.js"></script>
-        <!-- <script> function btn(){alert('Membership registration is complete.'); } </script> -->
-        <script type="text/javascript" src="../js/signup.js"></script>
-        <!-- <script src="https://code.jquery.com/jquery-latest.js"></script> -->
-        <!-- <script src="jquery-3.4.1.js"></script> -->
-
-        <script>
-            // Get the modal
-            var modal = document.getElementById('id01');
-
-            // When the user clicks anywhere outside of the modal, close it
-            window.onclick = function (event) {
-                if (event.target == modal) {
-                    modal.style.display = "none";
-                }
+            else if ($(pw).val() == "") {
+                $(pw).next('h5').addClass('warning');
             }
-        </script>
+            else if ($(cpw).val() == "") {
+                $(cpw).next('h5').addClass('warning');
+            }
 
-        <!-- see how it work클릭하면 스크롤내려감 -->
-        <script>
+            else {
+                // if($(email).val() !=null || $(username).val() != null || $(pw).val() != null || $(cpw).val() !=null){
+                alert("Sign up complete!!");
+            }
+        }
+    </script>
 
-            jQuery(document).ready(function ($) {
+    <script>
+        var email1 = document.getElementById("email1");
+        var pw1 = document.getElementById("pw1");
 
-                $(".scroll").click(function (event) {
-                    
-                    event.preventDefault();
+        function loginbtn() {
+            if ($(email1).val() == "") {
+                $(email1).next('label').addClass('warning');
+            }
+            else if ($(pw1).val() == "") {
+                $(pw1).next('label').addClass('warning');
+            }
 
-                    $('html,body').animate({ scrollTop: $(this.hash).offset().top }, 500);
+            // if($(email1).val() !="" && $(pw1).val() !=""){
+            //         // location.replace("homescreen.html")
+            //         location.href = "homescreen.html";
 
-                });
+            // }
+        }
+    </script>
+
+    <script>
+        var name1 = document.getElementById("name1");
+        var Email = document.getElementById("Email");
+        var phone1 = document.getElementById("phone1");
+        var message1 = document.getElementById("message1");
+
+        function cbtn(){
+            if ($(name1).val() == "") {
+                $(name1).next('span').addClass('warning');
+            }
+            else if ($(Email).val() == "") {
+                $(Email).next('span').addClass('warning');
+            }
+            else if ($(phone1).val() == "") {
+                $(phone1).next('span').addClass('warning');
+            }
+            else if ($(message1).val() == "") {
+                $(message1).next('span').addClass('warning');
+            }
+            else {
+                alert("Thank you for your message :)");
+            }
+        }
+    </script>
+
+
+    <!-- End Services Section -->
+
+    <!-- Vendor JS Files -->
+    <script src="../vendor/jquery/jquery.min.js"></script>
+    <script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../vendor/jquery.easing/jquery.easing.min.js"></script>
+    <script src="../vendor/php-email-form/validate.js"></script>
+    <script src="../vendor/typed/typed.js"></script>
+    <script src="../vendor/jquery-sticky/jquery.sticky.js"></script>
+    <script src="../vendor/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="../vendor/venobox/venobox.min.js"></script>
+    <script src="../vendor/owl.carousel/owl.carousel.min.js"></script>
+
+    <!-- Template Main JS File -->
+    <!-- 밑에 스크립트 적용하면 초록색 나옴 -->
+    <script src="../js/main.js"></script>
+    <script src="../js/signup.js"></script>
+    <!-- <script> function btn(){alert('Membership registration is complete.'); } </script> -->
+    <script type="text/javascript" src="../js/signup.js"></script>
+    <!-- <script src="https://code.jquery.com/jquery-latest.js"></script> -->
+    <!-- <script src="jquery-3.4.1.js"></script> -->
+
+    <script>
+        // Get the modal
+        var modal = document.getElementById('id01');
+
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function (event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+
+    <!-- see how it work클릭하면 스크롤내려감 -->
+    <script>
+
+        jQuery(document).ready(function ($) {
+
+            $(".scroll").click(function (event) {
+
+                event.preventDefault();
+
+                $('html,body').animate({ scrollTop: $(this.hash).offset().top }, 500);
 
             });
 
-        </script>
-        <script>
-            function goTop() {
-                document.documentElement.scrollTop = 0;
-            }
+        });
 
-        </script>
+    </script>
+    <script>
+        function goTop() {
+            document.documentElement.scrollTop = 0;
+        }
 
+    </script>
 </body>
 
 </html>
