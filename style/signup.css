@@ -277,6 +277,7 @@ button{
         display: none;
     }
     .signup-container{
-        justify-content: center;
+        justify-content: left;
+        width: 20%;
     }
 }
