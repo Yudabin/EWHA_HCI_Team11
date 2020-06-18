@@ -24,6 +24,9 @@ nav {
   background-color: #f1f1f1;
 }
 
+#second{
+  background-color: #f1f1f1;
+}
 .row:after {
   content: "";
   display: table;
@@ -41,6 +44,7 @@ video{
   /* width: 66.66666%; */
   width: 30vw;
   padding: 20px;
+  padding-top: 40px;
 }
   
 .column-33-one{
@@ -80,7 +84,7 @@ video{
 }
   
 .xlarge-font {
-  font-size: 64px;
+  font-size: 54px;
 }
 
 .button {
