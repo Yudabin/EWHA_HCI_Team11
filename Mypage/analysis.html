@@ -11,7 +11,9 @@
     <!-- Popper.JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-
+    <link href="https://fonts.googleapis.com/css?family=Crete+Round" rel="stylesheet">
+    
+     <script src="https://cdn.zingchart.com/zingchart.min.js"></script>
     <link href="../Mypage/mypage_css/style.css" rel="stylesheet" type="text/css">
     <link href="../style/analysis.css" rel="stylesheet" type="text/css">
     <link href="../Mypage/mypage_css/sidebar.css" rel="stylesheet" type="text/css">
@@ -156,7 +158,7 @@
                     <div class="card">
                         <div class="card-header">
                            
-                           <h5>MONTHLY DIARY CHART </h5>
+                           <h5>DIARY PIE CHART </h5>
                         </div>
                         <!-- /widget-header -->
                         <div class="card-body">
@@ -181,49 +183,13 @@
         </div>
     <!-- /container -->
 
-    <div class='col pl-5 pr-5 pt-4'>
-        <div class="card" id="chart">
-            <div class="card-header">
-                <h5>CHART</h5>
+    <div class='col pl-2 pr-5 pt-4' >
+        <div class="card" style="height: 1025px;">
+            <div class="card-header" >
+                <h5>WORD CLOUD</h5>
             </div>
-            <div class="card-body w-30 h-50">
-                <p>Chart the frequency of words you enter in your diary.
-                    <br> Click on the buttons inside the tabbed menu:</p>
-
-                <div class="tab">
-                    <button class="tablinks" onclick="openCity(event, 'Daily')">Daily</button>
-                    <button class="tablinks" onclick="openCity(event, 'Workout')">Workout</button>
-                    <button class="tablinks" onclick="openCity(event, 'Study')">Study</button>
-                    <button class="tablinks" onclick="openCity(event, 'Travel')">Travel</button>
-                </div>
-                <div id="Daily" class="tabcontent">
-                    <!-- <h5>Daily Diary</h5> -->
-                    <img id="chart" src="../text_analysis/results/My birthday party.png" alt="">
-                    <img id="chart" src="../text_analysis/results/HCI team meeting.png" alt="">
-                    <img id="chart" src="../text_analysis/results/Daily blog.png" alt="">
-                    <!-- <p>London is the capital city of England.</p> -->
-                </div>
-                <div id="Workout" class="tabcontent">
-                    <!-- <h3>WORKOUT</h3> -->
-                    <img id="chart" src="../text_analysis/results/Workout routine.png" alt="">
-                    <img id="chart" src="../text_analysis/results/Han river jogging.png" alt="">
-                    <img id="chart" src="../text_analysis/results/Body profile D-5.png" alt="">
-                    <!-- <p>Paris is the capital of France.</p> -->
-                </div>
-                <div id="Study" class="tabcontent">
-                    <!-- <h3>Study Plan</h3> -->
-                    <img id="chart" src="../text_analysis/results/Final term D-10.png" alt="">
-                    <img id="chart" src="../text_analysis/results/HCI Final presentation.png" alt="">
-                    <!-- <p>London is the capital city of England.</p> -->
-                </div>
-                <div id="Travel" class="tabcontent">
-                    <!-- <h3>TRAVEL</h3> -->
-                    <img id="chart" src="../text_analysis/results/LA Tour.png" alt="">
-                    <img id="chart" src="../text_analysis/results/Trip to China.png" alt="">
-                    <img id="chart" src="../text_analysis/results/Trip to Seoul.png" alt="">
-                    <!-- <p>London is the capital city of England.</p> -->
-                </div>
-
+            <div class="card-body" >
+                 <div id="myChart"></div>
             </div>
 
         </div>
@@ -733,6 +699,54 @@
 
     }
     </script>
+     <script>
+       ZC.LICENSE = ["569d52cefae586f634c54f86dc99e6a9", "b55b025e438fa8a98e32482b5f768ff5"];
+       zingchart.MODULESDIR = 'https://cdn.zingchart.com/modules/';
+    
+       var myConfig = {
+         type: 'wordcloud',
+         options: {
+           text: 'Diary set set set my dear for this day sets my dear for this day sets my dear for this day sets dear for this day sets dear for this day sets   Diary We’re the fun good hci the muscle workout jonggang grerate to happy free good great great the Lost happy of  We’re the hopeful good hci Diary because we want our kids Diary  That’s how we my my my Diary happy  workout he happy and the economy Today. We’re the ranch hci hci good hci hci Today day good great We’re the  HCI  easier because jonggang that first mile.  My got us travel,travel travel travel school school My first time visiting Seoul, South Korea. I had only heard of k-*, which is referring to Korean stuff.Today was the first day of the trip. favorite favorite I want to kyungbok place, Coex, Gangnam, HCI village. HCI HCI HCI My favorite place was the hanok happy My my HCI HCI HCI. The old houses were so nice good good good good P.S I learned some Korean words today. DearDiary This diary is only for planning trip to LA. Get active on Venice Beach Stroll along the stars in Hollywood Walk it off in Downtown L.A.Compared to just measuring waist circumference, good to height ratio is equally fair for short and tall persons. dear for this day sets dear for this day sets dear for this day sets dear for this day sets My My My love love love love great great hci hci hci',
+           minLength: 5,
+           ignore: ["America", "American", "Applause", "Because", "because", "could", "don’t", "people", "That’s", "that’s", "Their", "their", "there", "these", "thing", "those", "through", "We’re", "we’re", "where", "would"],
+           maxItems: 33,
+           aspect: 'flow-center',
+    
+           colorType: 'palette',
+           palette: ['#7A63FF', '#74E0EF', '#1976D2', 'pink', '#6D4C41', 'green', 'black', '#795548', '#2196F3', '#EF5350', '#8D6E63', '#42A5F5'],
+    
+           style: {
+             fontFamily: 'Crete Round',
+    //#7A63FF
+             hoverState: {
+               backgroundColor: 'darkgray',
+               borderRadius: 2,
+               fontColor: 'white'
+             },
+             tooltip: {
+               text: '%text: %hits',
+               visible: true,
+               alpha: 0.9,
+               backgroundColor: 'dimgrey',
+               borderRadius: 2,
+               borderColor: 'none',
+               fontColor: 'white',
+               fontFamily: 'Georgia',
+               textAlpha: 1
+             }
+           }
+         },
+    
+       
+       };
+    
+       zingchart.render({
+         id: 'myChart',
+         data: myConfig,
+         height: 800,
+         width: '100%'
+       });
+     </script>
 </body>
 
 </html>
