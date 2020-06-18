@@ -38,8 +38,9 @@ body {font-family: Arial;}
 }
 
 #chart{
-    width: 38em;
+    width: 100%;
     height: auto;
+    top: 20px;
 
 }
 
