@@ -121,18 +121,18 @@
 
 
                     <div class="card">
-                        <div class="card-header">
+                        <div class="card-header ">
 
                             <h5> CALENDAR</h5>
 
                         </div>
 
                         <!-- /widget-header -->
-                        <div class="card-body">
+                        <div class="card-body pt-5">
 
                             <i class="icon-list-alt"></i>
 
-                            <div id='calendar'>
+                            <div id='calendar' >
                             </div>
                         </div>
 
@@ -150,16 +150,19 @@
 
 
                 <!-- /span6 -->
+            <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
                 <div class="row-5 pt-4">
 
                     <div class="card">
                         <div class="card-header">
-                            <i class="icon-signal"></i>
-                            <h5>DIARY CHART </h5>
+                           
+                           <h5>MONTHLY DIARY CHART </h5>
                         </div>
                         <!-- /widget-header -->
                         <div class="card-body">
-                            <canvas id="area-chart" class="chart-holder" height="250" width="538"> </canvas>
+                            
+                       
+                            <div id="chartContainer" style="height: 300px; width: 100%;"></div>
                             <!-- /area-chart -->
                         </div>
                         <!-- /widget-content -->
@@ -571,48 +574,40 @@
 
 
     <script>
-
+        
         var lineChartData = {
             labels: ["January", "February", "March", "April", "May", "June", "July"],
             datasets: [
-                {
-                    fillColor: "rgba(220,220,220,0.5)",
-                    strokeColor: "rgba(220,220,220,1)",
-                    pointColor: "rgba(220,220,220,1)",
-                    pointStrokeColor: "#fff",
-                    data: [30, 15, 30, 15, 24, 25, 30]
-                },
+              
                 {
                     fillColor: "rgba(151,187,205,0.5)",
                     strokeColor: "rgba(151,187,205,1)",
                     pointColor: "rgba(151,187,205,1)",
-                    pointStrokeColor: "#74E0E",
+                    pointStrokeColor: "red",
                     data: [28, 48, 40, 19, 50, 27, 55]
                 }
-            ]
-
-        }
-
-        var myLine = new Chart(document.getElementById("area-chart").getContext("2d")).Line(lineChartData);
-
-
-        var barChartData = {
-            labels: ["January", "February", "March", "April", "May", "June", "July"],
-            datasets: [
-                {
-                    fillColor: "rgba(220,220,220,0.5)",
-                    strokeColor: "rgba(220,220,220,1)",
-                    data: [65, 59, 90, 81, 56, 55, 40]
+            ],
+            options: {
+                responsive:false,
+                scales: {
+                    yAxes: [{
+                        ticks: {
+                            beginAtZero: true
+                        }
+                    }]
                 },
-                {
-                    fillColor: "rgba(151,187,205,0.5)",
-                    strokeColor: "rgba(151,187,205,1)",
-                    data: [28, 48, 40, 19, 96, 27, 100]
-                }
-            ]
+            }
+            
 
         }
+    var myLine = new Chart(document.getElementById("area-chart").getContext("2d")).Line(lineChartData);
 
+    </script>
+    
+
+     <script>
+
+     
         $(document).ready(function () {
             var date = new Date();
             var d = date.getDate();
@@ -707,6 +702,38 @@
             evt.currentTarget.className += " active";
         }
     </script>
+    <script>
+    window.onload = function() {
+
+    var chart = new CanvasJS.Chart("chartContainer", {
+        theme: "light1", // "light1", "light2", "dark1", "dark2"
+        exportEnabled: true,
+        animationEnabled: true,
+         
+        data: [{
+            type: "pie",
+            startAngle: 25,
+            toolTipContent: "<b>{label}</b>: {y}",
+            showInLegend: "true",
+            legendText: "{label}",
+            indexLabelFontSize: 14,
+            indexLabel: "{label} - {y}%",
+           
+            dataPoints: [
+                { y: 51.08, label: "Daily Diary",  },
+                { y: 27.34, label: "Travel" },
+                { y: 10.62, label: "Workout" },
+                { y: 5.02, label: "Stury plans",color: "pink" },
+            
+           
+            ]
+        }]
+    });
+    chart.render();
+
+    }
+    </script>
 </body>
 
 </html>
+
