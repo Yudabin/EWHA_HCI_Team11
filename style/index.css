@@ -368,8 +368,8 @@ button{
 }
 
 
-
-@media screen and (max-width: 1050px){/*반응형*/
+/*반응형*/
+/* @media screen and (max-width: 1050px){
     .container{
         grid-gap: 5rem;
     }
@@ -390,6 +390,36 @@ button{
 }
 
 @media screen and (max-width: 900px){
+    .img{
+        display: none;
+    }
+    .container{
+        grid-template-columns: 1fr;
+    }
+    .wave{
+        display: none;
+    }
+    .signup-container{
+        justify-content: center;
+    }
+}
+ */
+
+
+@media screen and (max-width: 1023px){
+
+    .container{
+        grid-template-columns: 1fr;
+    }
+    .wave{
+        display: none;
+    }
+    .signup-container{
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 767px){
     .img{
         display: none;
     }

@@ -259,5 +259,17 @@ span.psw {
         width: 100%;
     }
 }
+@media screen and (max-width: 767px){
+    span.psw {
+        display: block;
+        float: none;
+    }
+    .modal-content{
+        width: 30%;
+    }
+    .cancelbtn {
+        width: 100%;
+    }
 
+}
 
