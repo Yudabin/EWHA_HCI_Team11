@@ -266,7 +266,7 @@ span.psw {
     }
     .modal-content{
         /* width: 50%; */
-        float: center;
+        float: auto;
     }
     .cancelbtn {
         width: 100%;
