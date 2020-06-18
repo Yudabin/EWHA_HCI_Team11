@@ -138,7 +138,7 @@ img {
   background-position: right; 
 }
 
-
+/* 
   @media (min-width: 0px) and (max-width: 991px) {
     .column-66,
     .column-33 {
@@ -168,7 +168,7 @@ img {
     img {
       margin: auto;
     }
-  }
+  } */
 .form-group{
     /* width: 1; */
     float:left;
@@ -422,7 +422,6 @@ img {
     float: none;
     display: inline-block;
   }
-  }
   
   
   .contact-contact {
@@ -565,3 +564,13 @@ img {
   }
   }
    */
+
+   @media screen and (max-width: 767px){
+     video{
+       display: none;
+     }
+     .container{
+       float: center;
+     }
+     
+   }
