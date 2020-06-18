@@ -46,14 +46,18 @@
 
 
             <!-- Menu 1 -->
-            <a href="#" class="bg-dark list-group-item list-group-item-action">
+           
+            <a href="../Mypage/mypage_tab.html" id='my1' class=" list-group-item list-group-item-action">
+               
                 <div class="d-flex w-100 justify-content-start align-items-center">
 
                     <span class="fa fa-user fa-fw mr-3"></span>
-                    <span class="menu-collapsed">My Page</span>
-
+                    <span   class="menu-collapsed">My Page</span>
+   
                 </div>
+             
             </a>
+            
 
              <!-- Menu 2-->
                           <a href="../Mypage/creatediary.html" class="bg-dark list-group-item list-group-item-action">
@@ -70,7 +74,7 @@
                           </li>
                           <!-- /END Separator -->
                           <!-- Menu 3-->
-                          <a href="../Mypage/analysis.html" class="bg-dark list-group-item list-group-item-action">
+                          <a  href="../Mypage/analysis.html" class="bg-dark list-group-item list-group-item-action">
                               <div class="d-flex w-100 justify-content-start align-items-center">
                                   <span class="fa fa-dashboard fa-fw mr-3"></span>
                                   <span class="menu-collapsed">Analysis</span>
@@ -144,7 +148,7 @@
 
                         <div class="panel panel-group-flush" id="collapseOne_container">
                             <div class="panel-heading" role="tab" id="headingOne">
-                                <h6 class="panel-title font-weight-light pl-3 pt-1">
+                                <h6 class="panel-title font-weight pl-3 pt-1">
                                     <span class="fa fa-angle-double-right pr-1" style="font-size:24px"></span>
                                     DAILY DIARY
                                   
@@ -198,7 +202,7 @@
                         aria-controls="collapseTwo">
                         <div class="panel panel-default" id="collapseTwo_Container">
                             <div class="panel-heading" role="tab" id="headingTwo">
-                                <h6 class="panel-title font-weight-light  pl-3 pt-1">
+                                <h6 class="panel-title font-weight  pl-3 pt-1">
                                     <span class="fa fa-angle-double-right pr-1" style="font-size:24px"></span>
                                     WORKOUT
                                    
@@ -248,7 +252,7 @@
                     aria-controls="collapseThree">
                     <div class="panel panel-default" id="collapseThree_Container">
                         <div class="panel-heading" role="tab" id="headingThree">
-                            <h6 class="panel-title font-weight-light  pl-3 pt-1">
+                            <h6 class="panel-title font-weight  pl-3 pt-1">
 
                                 <span class="fa fa-angle-double-right pr-1" style="font-size:24px"></span> STUDY PLANS
                                 
@@ -291,7 +295,7 @@
                     <div class="panel panel-default" id="collapsefour_Container">
 
                         <div class="panel-heading" role="tab" id="headingFour">
-                            <h6 class="panel-title font-weight-light  pl-3 pt-1">
+                            <h6 class="panel-title font-weight  pl-3 pt-1">
                                 <span class="fa fa-angle-double-right pr-1" style="font-size:24px"></span>
                                 TRAVEL
                                
@@ -1150,6 +1154,16 @@
     }
 
 </script>
+<script>
+    $(document).ready(function() {
+      
 
+      $('#my1').click(function(e) {
+     
+        $('#my1').removeClass('active');
+        $(this).addClass('active');
+      });
+    });
+</script>
 </body>
 </html>

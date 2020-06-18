@@ -22,7 +22,30 @@
     background-color: #333;
     padding: 0;
 }
+/*
+#my1{
+    background-color: #74E0EF;
+   
+    width:100%;
+    height:100%;
+}
+*/
+#my1 span{
+     color:black;
+    
+}
+#my1:hover{
+    
+     opacity:0.5;
+    
+}
+#my1 > active {
+ background-color: #74E0EF;
+ color:#74E0EF;
+}
+#my1 > .active:hover {
 
+}
 /* Sidebar sizes when expanded and expanded */
 .sidebar-expanded {
     width: 230px;
@@ -57,7 +80,7 @@
 }
 .logo-separator {
     background-color: #333;
-    height: 60px;
+   
 }
 
 /* Closed submenu icon */
