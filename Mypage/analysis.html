@@ -69,7 +69,7 @@
                 </li>
                 <!-- /END Separator -->
                 <!-- Menu 3-->
-                <a href="../Mypage/analysis.html" class="bg-dark list-group-item list-group-item-action">
+                <a href="../Mypage/analysis.html" id='my1' class=" list-group-item list-group-item-action">
                     <div class="d-flex w-100 justify-content-start align-items-center">
                         <span class="fa fa-dashboard fa-fw mr-3"></span>
                         <span class="menu-collapsed">Analysis</span>
@@ -746,6 +746,17 @@
          height: 800,
          width: '100%'
        });
+     </script>
+     <script>
+         $(document).ready(function() {
+           
+
+           $('#my1').click(function(e) {
+
+             $('#my1').removeClass('active');
+             $(this).addClass('active');
+           });
+         });
      </script>
 </body>
 
