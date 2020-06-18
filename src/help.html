@@ -85,7 +85,7 @@
                 <!-- Separator without title -->
                 <li class="list-group-item sidebar-separator menu-collapsed"></li>
                 <!-- /END Separator -->
-                <a href="help.html" class="bg-dark list-group-item list-group-item-action">
+                <a href="help.html" id='my1' class="list-group-item list-group-item-action">
                     <div class="d-flex w-100 justify-content-start align-items-center">
                         <span class="fa fa-question fa-fw mr-3"></span>
                         <span class="menu-collapsed">Help</span>
@@ -157,7 +157,8 @@
                                     <br> ▶The circle menu allows you to change the size of the drawing tool below.
                                     <br> ▶The drawing tool has pencil, text insertion, eraser, and picture insertion functions.
                                     <br> ▶Click the 'more' button on the right to perform the undo function, save, and export
-                                    function.</p>
+                                    function.
+                                </p>
                             </div>
                         </div>
                     </div>
@@ -544,6 +545,18 @@
                         $("#mycard ").filter(function () {
                             $(this).toggle($(this).find('.card-link').text().toLowerCase().indexOf(value) > -1)
                         });
+                    });
+                });
+            </script>
+
+            <script>
+                $(document).ready(function () {
+
+
+                    $('#my1').click(function (e) {
+
+                        $('#my1').removeClass('active');
+                        $(this).addClass('active');
                     });
                 });
             </script>
