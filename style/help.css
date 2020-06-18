@@ -354,8 +354,7 @@ img {
   /** Width between 768px to 991px
   *  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
   */
-  @media (min-width: 0px) and (max-width: 991px) {
-  /* Navbar */
+  /* @media (min-width: 0px) and (max-width: 991px) {
   nav {
     padding: 10px 15px;
   }
@@ -380,7 +379,7 @@ img {
     padding-top: 15px;
     display: block;
   }
-  /* About */
+
   .head-info .header-content .cmaster h1 {
     font-size: 32px;
   }
@@ -395,28 +394,28 @@ img {
     margin-left: calc(0% - 0px);
   }
   #about .about-descr .p-heading {
-    /* font-size: 20px; */
+
     max-width: 100%;
   }
   #about .about-descr .separator {
     max-width: 100%;
     margin-bottom: 0;
   }
-  /* portfolio */
+
   #portfolio .portfolio-list .nav li {
     float: none;
     margin: 20px;
     display: inline-block;
   }
-  /* journal */
+   */
   #journal .journal-block .journal-info {
     margin-bottom: 30px;
   }
-  /* Contact */
+
   .contact-contact {
     margin-bottom: 30px;
   }
-  /* Footer */
+
   #footer .socials-media ul li {
     margin-right: 0;
     margin-left: 0;
@@ -425,15 +424,10 @@ img {
   }
   }
   
-  /** Width between 767px to 0
-  *  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-  */
   
-  /* Contact */
   .contact-contact {
     margin-bottom: 30px;
   }
-  /* Footer */
   #footer .socials-media ul li {
     margin-right: 0;
     margin-left: 0;
@@ -445,8 +439,7 @@ img {
   /** Width between 600px to 0
   *  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
   */
-  @media (max-width: 600px) {
-  /* Navbar */
+  /* @media (max-width: 600px) {
   nav {
     padding: 20px 15px;
   }
@@ -472,11 +465,10 @@ img {
     display: block;
   }
   
-  /* Contact */
   .contact-contact {
     margin-bottom: 30px;
   }
-  /* Footer */
+  
   #footer .socials-media ul li {
     margin-right: 0;
     margin-left: 0;
@@ -484,12 +476,11 @@ img {
     display: inline-block;
   }
   }
-  
+   */
   /** Width between 480px to 0
   *  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
   */
-  @media (max-width: 480px) {
-  /* Navbar */
+  /* @media (max-width: 480px) {
   nav {
     padding: 20px 15px;
   }
@@ -515,11 +506,11 @@ img {
     display: block;
   }
   
-  /* Contact */
+
   .contact-contact {
     margin-bottom: 30px;
   }
-  /* Footer */
+
   #footer .socials-media ul li {
     margin-right: 0;
     margin-left: 0;
@@ -527,12 +518,11 @@ img {
     display: inline-block;
   }
   }
-  
+   */
   /** Width between 320px to 0
   *  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
   */
-  @media (max-width: 320px) {
-  /* Navbar */
+  /* @media (max-width: 320px) {
   nav {
     padding: 20px 15px;
   }
@@ -558,21 +548,20 @@ img {
     display: block;
   }
   
-  /* Contact */
   .contact-contact {
     margin-bottom: 30px;
   }
-  /* Footer */
+
   #footer .socials-media ul li {
     margin-right: 0;
     margin-left: 0;
     float: none;
     display: inline-block;
   }
-  /* Single page */
+
   .entry-comments-body span {
     display: inline-block;
     margin-right: 0;
   }
   }
-  
+   */
