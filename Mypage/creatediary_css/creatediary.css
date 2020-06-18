@@ -163,8 +163,11 @@
 
 }
 
-
-
+#aww-toolbar-window .aww-menu .aww-submenu .aww-menu-item{
+    padding: 9px;
+    background: rgba(51, 51, 51,0.5);
+    margin-left: 16px;
+}
 
 
 input:focus,
