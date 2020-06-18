@@ -178,3 +178,8 @@ textarea:focus,
 button:focus {
     outline: none;
 }
+img {
+    display: block;
+    height: auto;
+    max-width: 100%;
+  }
