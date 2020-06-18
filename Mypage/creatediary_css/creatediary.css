@@ -25,7 +25,7 @@
     text-overflow: clip;
     font-size: 30px;
     border:none;
-    background-color: white;
+    background-color: white !important;
 }
 
 #category {
@@ -77,7 +77,7 @@
     height: 40px;
     border:none;
     text-align: center;
-    background-color: white;
+    background-color: white !important;
 
 }
 
