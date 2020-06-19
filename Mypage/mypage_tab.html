@@ -715,7 +715,7 @@
         <div class="card-body h-100">
 
            
-                <span id='pencil' class="fa fa-pencil p-2" style="font-size:20px; " type="button"  aria-hidden="true">edit</span>
+                <span id='pencil' class="fa fa-pencil p-2" style="font-size:20px; " type="button"  aria-hidden="true" onclick="go()">edit</span>
             
             <p>
                 <img id="first" src="../Mypage/img/diary8.png" class="img-fluid" alt="Responsive image"></img>
@@ -1165,5 +1165,193 @@
       });
     });
 </script>
+<script>
+function go() {
+    console.log('as');
+    window.FakeLoader.init();
+
+    location.href='../Mypage/edit8.html';
+    auto_hide: true
+
+           }
+
+</script>
+<script>
+    window.FakeLoader = (function($, window, document) {
+
+      var settings = {
+        auto_hide: true,
+        overlay_id: 'fakeloader-overlay',
+        fade_timeout: 700000,
+        wait_for_images: true,
+        wait_for_images_selector: 'body'
+      }
+
+      var $overlay = null;
+
+      var fakeLoader = {
+
+        hideOverlay: function() {
+          $overlay.removeClass('visible');
+
+          window.setTimeout(
+            function() {
+              $overlay.addClass('hidden');
+            },
+            settings.fade_timeout
+          );
+        },
+
+        showOverlay: function() {
+          $overlay.removeClass('hidden').addClass('visible');
+        },
+
+        init: function( given_settings ) {
+
+          $.extend( settings, given_settings );
+
+          if ( $('#' + settings.overlay_id).length <= 0 ) {
+            $overlay = $('<div id="' + settings.overlay_id + '" class="visible incoming"><div class="loader-wrapper-outer"><div class="loader-wrapper-inner"><div class="loader"></div></div></div></div>');
+            $('body').append($overlay);
+
+            if (typeof(console) !== 'undefined' && typeof(console.log) !== 'undefined') {
+              console.log( "You should put the fakeLoader loading overlay element in your markup directly for best results." );
+            }
+          }
+          else {
+            $overlay = $('#' + settings.overlay_id);
+          }
+
+          $overlay.click(
+            function() {
+              fakeLoader.hideOverlay();
+            }
+          );
+
+          $(window).bind('beforeunload', function() {
+
+            $('#' + settings.overlay_id).removeClass('incoming').addClass('outgoing');
+            fakeLoader.showOverlay();
+
+          });
+
+          $(document).ready(
+            function() {
+              if ( settings.auto_hide == true ) {
+                if ( typeof($.fn.waitForImages) == 'function' && settings.wait_for_images == true) {
+                  $(settings.wait_for_images_selector).waitForImages(
+                    function() {
+                      fakeLoader.hideOverlay();
+                    }
+                  )
+
+                }
+                else {
+                  fakeLoader.hideOverlay();
+                }
+              }
+            }
+          );
+
+        }
+
+      }
+
+      return fakeLoader;
+
+    })(jQuery, window, document);
+
+    </script>
+<style>
+    #fakeloader-overlay {
+      opacity: 0;
+      top: 0px;
+      left: 0px;
+      position: fixed;
+      background-color: rgba(255, 255, 255, 0.8);
+      height: 100%;
+      width: 100%;
+      z-index: 9998;
+      -webkit-transition: opacity 0.2s linear;
+      -moz-transition: opacity 0.2s linear;
+      transition: opacity 0.2s linear;
+    }
+
+    #fakeloader-overlay.visible {
+      opacity: 1;
+    }
+
+    #fakeloader-overlay.hidden {
+      opacity: 0;
+      height: 0px;
+      width: 0px;
+      z-index: -10000;
+    }
+
+    #fakeloader-overlay .loader-wrapper-outer {
+      background-color: transparent;
+      z-index: 9999;
+      margin: auto;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      display: table;
+      text-align: center;
+      vertical-align: middle;
+    }
+
+    #fakeloader-overlay .loader-wrapper-inner {
+      display: table-cell;
+      vertical-align: middle;
+    }
+
+    #fakeloader-overlay .loader {
+      margin: auto;
+      font-size: 10px;
+      position: relative;
+      text-indent: -9999em;
+      border-top: 8px solid rgba(255, 255, 255, 0.5);
+      border-right: 8px solid rgba(255, 255, 255, 0.5);
+      border-bottom: 8px solid rgba(255, 255, 255, 0.5);
+      border-left: 8px solid #AAA;
+      -webkit-transform: translateZ(0);
+      -ms-transform: translateZ(0);
+      transform: translateZ(0);
+      -webkit-animation: fakeloader 1.1s infinite linear;
+      animation: fakeloader 1.1s infinite linear;
+    }
+
+    #fakeloader-overlay .loader, #fakeloader-overlay .loader:after {
+
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+    }
+
+    @-webkit-keyframes fakeloader {
+      0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+      }
+
+      100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+      }
+    }
+
+    @keyframes fakeloader {
+      0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+      }
+
+      100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+      }
+    }
+
+</style>
 </body>
 </html>
