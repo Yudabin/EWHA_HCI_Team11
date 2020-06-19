@@ -25,7 +25,13 @@
 </head>
 
 <body id="page-top">
-
+    <aside class="right">
+        <a href="#" class="righttop">
+            <!-- <i class="fa fa-arrow-up"></i> -->
+            <i onclick="goTop()" class="fa fa-arrow-up"></i>
+            <br>TOP
+        </a>
+    </aside>
     <!-- Masthead-->
     <!-- <header class="masthead bg-primary text-white text-center"> -->
     <div class="container d-flex align-items-center flex-column">
@@ -314,10 +320,9 @@
                 </div>
             </div>
         </div>
-        <div class="top">
-            <!-- <button class="top" type="button" onclick="goTop()">맨 위로 ↑</button> -->
+        <!-- <div class="top">
             <i onclick="goTop()" class="fas fa-arrow-circle-up fa-3x"></i>
-        </div>
+        </div> -->
     </section>
     <!-- Footer-->
 
@@ -476,6 +481,25 @@
         }
 
     </script>
+
+    <script>
+        $(document).ready(function () {
+            $(window).scroll(function () {
+                if ($(this).scrollTop() > 120) {
+                    $('.righttop').fadeIn();
+                }
+                else {
+                    $('.righttop').fadeOut();
+                }
+            });
+            // $('.right-top').click(function () {
+            //     $('html, .page-top').animate({ scrollTop: 0 }, 800);
+            //     return false;
+            // });
+        });
+    </script>
+
+
 </body>
 
 </html>
